@@ -10,7 +10,7 @@ $(document).ready(() => {
     // view-record.html only
     $(".records .dataTable-wrapper .dataTable-top .dataTable-dropdown").html("");
     if(window.matchMedia("(max-width: 767px)").matches){
-        $(".records .dataTable-wrapper .dataTable-top .dataTable-search .dataTable-input").css("width", "17.5rem");
+        // $(".records .dataTable-wrapper .dataTable-top .dataTable-search .dataTable-input").css("width", "17.5rem");
     }
 })
 
