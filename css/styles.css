@@ -21044,3 +21044,22 @@ pre[class*=language-] {
 .token.variable {
   color: #ff6666;
 }
+
+
+/* New Added Code */
+
+.input-grade {
+  width: 80px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.input-header-card {
+  text-align: center;
+  color: #0061f2;
+  width: 40px;
+  border: none;
+  border-bottom: 1px solid #0061f2;
+  background-color: transparent;
+  outline: none; 
+}

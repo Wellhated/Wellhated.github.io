@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>New Faculty Member - Profile</title>
+        <title>Instructor Classes - CAA</title>
+        <link href="./css/simple-datatables-style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
         <script data-search-pseudo-elements defer src="./js/all.min.js"></script>
@@ -294,100 +295,168 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <!-- Main page content-->
-                    <div class="container-xl px-4 mt-4">
-                        <!-- Account page navigation-->
-                        <nav class="nav nav-borders">
-                            <a class="nav-link active ms-0" href="account-profile.html">New Faculty Member</a>
-                        </nav>
-                        <hr class="mt-0 mb-4" />
-                        <div class="row">
-                            <div class="col-xl-4">
-                                <!-- Profile picture card-->
-                                <div class="card mb-4 mb-xl-0">
-                                    <div class="card-header">Profile Picture</div>
-                                    <div class="card-body text-center">
-                                        <!-- Profile picture image-->
-                                        <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" />
-                                        <!-- Profile picture help block-->
-                                        <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
-                                        <!-- Profile picture upload button-->
-                                        <button class="btn btn-primary" type="button">Upload new image</button>
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="container-fluid px-4">
+                            <div class="page-header-content">
+                                <div class="row align-items-center justify-content-between pt-3">
+                                    <div class="col-auto mb-3">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="book"></i></div>
+                                            Personal Development - E-Class Record
+                                        </h1>
+                                    </div>
+                                    <div class="col-12 col-xl-auto mb-3">
+                                        <a class="btn btn-sm btn-light text-primary" href="user-management-add-user.html">
+                                            <i class="me-1" data-feather="save"></i>
+                                            Publish Record
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-8">
-                                <!-- Account details card-->
-                                <div class="card mb-4">
-                                    <div class="card-header">Account Details</div>
-                                    <div class="card-body">
-                                        <form>
-                                            <!-- Form Row-->
-                                            <div class="row gx-3 mb-3">
-                                                <!-- Form Group (first name)-->
-                                                <div class="col-md-4">
-                                                    <label class="small mb-1" for="inputFirstName">First name</label>
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="" value="" />
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label class="small mb-1" for="inputLastName">Middle name</label>
-                                                    <input class="form-control" id="inputLastName" type="text" placeholder="" value="" />
-                                                </div>
-                                                <!-- Form Group (last name)-->
-                                                <div class="col-md-4">
-                                                    <label class="small mb-1" for="inputLastName">Last name</label>
-                                                    <input class="form-control" id="inputLastName" type="text" placeholder="" value="" />
-                                                </div>
-                                            </div>
-                                            <!-- Form Group (email address)-->
-                                            <div class="row gx-3 mb-3">
-                                                <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                                    <input class="form-control" id="inputEmailAddress" type="email" placeholder="" value="" />
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputPhone">Phone number</label>
-                                                    <input class="form-control" id="inputPhone" type="tel" placeholder="+6391234568" value="" />
-                                                </div>
-                                            </div>
-                                            <div class="row gx-3 mb-3">
-                                                <!-- <div class="col-md-4">
-                                                    <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                                    <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988" />
-                                                </div> -->
-                                                <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputGender">Birthday</label>
-                                                    <div class="input-group input-group-joined" style="width: 20rem; height: 50px;">
-                                                        <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
-                                                        <input class="form-control ps-0 pointer" id="litepickerRangePlugin" placeholder="Select date range...">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 sbp-preview-content">
-                                                    <label class="small mb-1" for="inputGender">Birthday</label>
-
-                                                    <div class="form-check form-check-solid">
-                                                        <input class="form-check-input" id="flexRadioSolid1" type="radio" name="flexRadioSolid">
-                                                        <label class="form-check-label" for="flexRadioSolid1">Male</label>
-                                                    </div>
-                                                    <div class="form-check form-check-solid">
-                                                        <input class="form-check-input" id="flexRadioSolid2" type="radio" name="flexRadioSolid" checked="">
-                                                        <label class="form-check-label" for="flexRadioSolid2">Female</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Form Row-->
-                                            <div class="row gx-3 mb-3">
-                                                <div class="col-md-12">
-                                                    <label class="small mb-1" for="inputOrgName">Role ( Line by line )</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                </div>
-                                            </div>
-                                            <!-- Save changes button-->
-                                            <button class="btn btn-primary" type="button">Register</button>
-                                            <button class="btn btn-danger" type="button">Clear</button>
-                                        </form>
-                                    </div>
-                                </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-fluid px-4">
+                        <!-- Account page navigation-->
+                        <nav class="nav nav-borders">
+                            <a class="nav-link active ms-0" href="#">1st Quarter</a>
+                            <a class="nav-link" href="#">2nd Quarter</a>
+                            <a class="nav-link" href="#">3rd Quarter</a>
+                            <a class="nav-link" href="#">4th Quarter</a>
+                        </nav>
+                        <hr class="mt-0 mb-4" />
+                        <div class="card">
+                            <div class="card-header">Written Works <span><input class="input-header-card" type="text" value="40" id=""></span>%</div>
+                            <div class="card-body">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>2</th>
+                                            <th>3</th>
+                                            <th>4</th>
+                                            <th>5</th>
+                                            <th>6</th>
+                                            <th>7</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                            <th>Total</th>
+                                            <th>PS</th>
+                                            <th>WS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input class="input-grade text-red" id="written_score1" type="text" placeholder="" value="INC" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-yellow" id="written_score2" type="text" placeholder="" value="75" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-primary" id="written_score3" type="text" placeholder="" value="88" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-green" id="written_score4" type="text" placeholder="" value="90" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-yellow" id="written_score5" type="text" placeholder="" value="75" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-red" id="written_score6" type="text" placeholder="" value="INC" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-green" id="written_score7" type="text" placeholder="" value="90" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-primary" id="written_score8" type="text" placeholder="" value="88" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-yellow" id="written_score9" type="text" placeholder="" value="75" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-red" id="written_score10" type="text" placeholder="" value="INC" />
+                                            </td>
+                                            <td>
+                                                <input disabled class="input-grade" id="total" type="text" placeholder="" value="100" />
+                                            </td>
+                                            <td>
+                                                <input disabled class="input-grade" id="percentage" type="text" placeholder="" value="100%" />
+                                            </td>
+                                            <td>
+                                                <input disabled class="input-grade" id="wpa" type="text" placeholder="" value="4.8" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div style="margin-top: 10px" class="card">
+                            <div class="card-header">Performance Task <span><input class="input-header-card" type="text" value="60" id=""></span>%</div>
+                            <div class="card-body">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>2</th>
+                                            <th>3</th>
+                                            <th>4</th>
+                                            <th>5</th>
+                                            <th>6</th>
+                                            <th>7</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                            <th>Total</th>
+                                            <th>PS</th>
+                                            <th>WS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input class="input-grade text-red" id="written_score1" type="text" placeholder="" value="INC" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-yellow" id="written_score2" type="text" placeholder="" value="75" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-primary" id="written_score3" type="text" placeholder="" value="88" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-green" id="written_score4" type="text" placeholder="" value="90" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-yellow" id="written_score5" type="text" placeholder="" value="75" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-red" id="written_score6" type="text" placeholder="" value="INC" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-green" id="written_score7" type="text" placeholder="" value="90" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-primary" id="written_score8" type="text" placeholder="" value="88" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-yellow" id="written_score9" type="text" placeholder="" value="75" />
+                                            </td>
+                                            <td>
+                                                <input class="input-grade text-red" id="written_score10" type="text" placeholder="" value="INC" />
+                                            </td>
+                                            <td>
+                                                <input disabled class="input-grade" id="total" type="text" placeholder="" value="100" />
+                                            </td>
+                                            <td>
+                                                <input disabled class="input-grade" id="percentage" type="text" placeholder="" value="100%" />
+                                            </td>
+                                            <td>
+                                                <input disabled class="input-grade" id="wpa" type="text" placeholder="" value="4.8" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -406,8 +475,11 @@
                 </footer>
             </div>
         </div>
-
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="./js/scripts.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script> -->
+        <script src="./js/simple-datatables.js"></script>
+        <script src="./js/datatables/datatables-simple-demo.js"></script>
     </body>
 </html>
