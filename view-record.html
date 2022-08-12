@@ -319,7 +319,7 @@
                     <div class="container-fluid px-4">
                         <div class="card">
                             <div class="card-body records">
-                                <table id="datatablesSimple">
+                                <table class="e-class-event" id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th>Learner Reference Number</th>
@@ -351,7 +351,102 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
+                                        <div class="modal fade" id="exampleModalXl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" style="display: none;" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Student Profile</h5>
+                                                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container-xl px-4 mt-4">
+                                                            <hr class="mt-0 mb-4" />
+                                                            <div class="row">
+                                                                <div class="col-xl-4">
+                                                                    <!-- Profile picture card-->
+                                                                    <div class="card mb-4 mb-xl-0">
+                                                                        <div class="card-header">Profile Picture</div>
+                                                                        <div class="card-body text-center">
+                                                                            <!-- Profile picture image-->
+                                                                            <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-2.png" alt="" />
+                                                                            <!-- Profile picture help block-->
+                                                                            <div class="small text-muted">
+                                                                                Tags
+                                                                            </div>
+                                                                            <div class="small text-muted mb-4">
+                                                                                <span class="badge bg-primary-soft text-blue">Student</span>
+                                                                                <span class="badge bg-red-soft text-red">Music & Arts Director SBO</span>
+                                                                            </div>                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-8">
+                                                                    <!-- Account details card-->
+                                                                    <div class="card mb-4">
+                                                                        <div class="card-header">Account Details</div>
+                                                                        <div class="card-body">
+                                                                            <form>
+                                                                                <!-- Form Row-->
+                                                                                <div class="row gx-3 mb-3">
+                                                                                    <!-- Form Group (first name)-->
+                                                                                    <div class="col-md-4">
+                                                                                        <label class="small mb-1">First name</label>
+                                                                                        <h5>Landrei</h5>
+                                                                                        <!-- <input class="form-control" id="inputFirstName" type="text" placeholder="" value="" /> -->
+                                                                                    </div>
+                                                                                    <div class="col-md-4">
+                                                                                        <label class="small mb-1">Middle name</label>
+                                                                                        <h5>Rafanan</h5>
+                                                                                    </div>
+                                                                                    <!-- Form Group (last name)-->
+                                                                                    <div class="col-md-4">
+                                                                                        <label class="small mb-1">Last name</label>
+                                                                                        <h5>Zerna</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Form Group (email address)-->
+                                                                                <div class="row gx-3 mb-3">
+                                                                                    <div class="col-md-6">
+                                                                                        <label class="small mb-1">Email address</label>
+                                                                                        <h5>zernalandrei@gmail.com</h5>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <label class="small mb-1">Phone number</label>
+                                                                                        <h5>+639455868528</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row gx-3 mb-3">
+                                                                                    <!-- <div class="col-md-4">
+                                                                                        <label class="small mb-1" for="inputBirthday">Birthday</label>
+                                                                                        <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988" />
+                                                                                    </div> -->
+                                                                                    <div class="col-md-6">
+                                                                                        <label class="small mb-1">Date of Birth</label>
+                                                                                        <h5>September 25, 2005</h5>
+                                                                                    </div>
+                                                                                    <div class="col-md-6 sbp-preview-content">
+                                                                                        <label class="small mb-1">Gender</label>
+                                                                                        <h5>Male</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Form Row-->
+                                                                                <div class="row gx-3 mb-3">
+                                                                                    <div class="col-md-12">
+                                                                                        <label class="small mb-1" for="inputOrgName">Address</label>
+                                                                                        <p>G12 Purok IV-A Sta.Catalina Zamboanga City</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer"><button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <tr id="id-126123132542">
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     126123132542
@@ -369,13 +464,13 @@
                                             </td>
                                             <td>
                                                 <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="edit-eclass.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="save"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
                                                 <span class="badge bg-green-soft text-green">Fully Paid</span>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr id="id-306432189124">
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     306432189124
@@ -393,7 +488,7 @@
                                             </td>
                                             <td>
                                                 <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="user-management-edit-user.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="save"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
                                                 <span class="badge bg-red-soft text-red">Pending Balance</span>
