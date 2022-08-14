@@ -9,6 +9,14 @@ $(document).ready(() => {
 
     // view-record.html only
     $(".records .dataTable-wrapper .dataTable-top .dataTable-dropdown").html("");
+
+    // view-students.html only
+    if(window.matchMedia("(max-width: 767px)").matches){
+        $(".student-view .dataTable-wrapper .dataTable-top .dataTable-dropdown").html("");
+    }
+
+    // view-student-grade.html only
+    $(".view-student-grade .dataTable-wrapper .dataTable-top").html("");
     
     // view-faculty.html only
     if(window.matchMedia("(max-width: 767px)").matches){

@@ -9,7 +9,7 @@
     <title>Caldwell Adventist Academy</title>
     <link href="./css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
-    <script data-search-pseudo-elements defer src="./js/all.min.js" crossorigin="anonymous"></script>
+    <script data-search-pseudo-elements defer src="./js/all.min.js" ></script>
     <script src="./js/feather.min.js"></script>
 </head>
 <body class="nav-fixed">
@@ -33,7 +33,6 @@
         <ul class="navbar-nav align-items-center ms-auto">
             <!-- Documentation Dropdown-->
             <li class="nav-item dropdown no-caret d-none d-md-block me-3">
-                <!--href="javascript:void(0);""-->
                 <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="fw-500">CAA Portal</div>
                     <i class="fas fa-chevron-right dropdown-arrow"></i>
@@ -196,7 +195,7 @@
                     <div class="nav accordion" id="accordionSidenav">
                         <!-- Sidenav Menu Heading (Account)-->
                         <!-- * * Note: * * Visible only on and above the sm breakpoint-->
-                        <div class="sidenav-menu-heading d-sm-none">Account</div>
+                        <div class="sidenav-menu-heading d-sm-none">My Account</div>
                         <!-- Sidenav Link (Alerts)-->
                         <!-- * * Note: * * Visible only on and above the sm breakpoint-->
                         <a class="nav-link d-sm-none" href="#!">
@@ -211,84 +210,28 @@
                             Messages
                             <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
                         </a>
-                        <!-- Sidenav Menu Heading (Core)-->
-                        <div class="sidenav-menu-heading">Admin Panel</div>
-                        <!-- Sidenav Accordion (Dashboard)-->
-                        <a class="active nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false" aria-controls="collapseDashboards">
-                            <div class="nav-link-icon"><i data-feather="activity"></i></div>
-                            Dashboard
-                            <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapseDashboards" data-bs-parent="#accordionSidenav">
-                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="dashboard-1.html">
-                                    Default
-                                    <span class="badge bg-primary-soft text-primary ms-auto">Updated</span>
-                                </a>
-                                <a class="nav-link" href="dashboard-2.html">Multipurpose</a>
-                                <a class="nav-link" href="dashboard-3.html">Affiliate</a>
-                            </nav>
+                        <div class="mobile-container container" style="margin-top: 15px; display: none;">
+                            <hr style="display: none" class="nav-hr mt-0 mb-4" />
                         </div>
-                        <a class="nav-link" href="#">
-                            <div class="nav-link-icon"><i data-feather="user"></i></div>
-                            Organizations
+                        <!-- Sidenav Menu Heading (Core)-->
+                        <div class="mobile-header-set sidenav-menu-heading">My Account</div>
+                        <!-- Sidenav Accordion (Dashboard)-->
+                        <a class="nav-link" href="./student-enrolled-subjects.html">
+                            <div class="nav-link-icon"><i data-feather="book-open"></i></div>
+                            Enrolled Subjects
                         </a>
                         <a class="nav-link" href="#">
                             <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>
-                            Cashier
-                            <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
+                            Cashier Account
                         </a>
 
-                        <!-- Sidenav Heading (Addons)-->
-                        <div class="sidenav-menu-heading">School Management</div>
-                        <!-- Sidenav Link (Charts)-->
-                        <a class="nav-link" href="./view-students.html">
-                            <div class="nav-link-icon"><i data-feather="users"></i></div>
-                            Students
-                        </a>
-
-                        <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="false" aria-controls="collapseFaculty">
-                            <div class="nav-link-icon"><i data-feather="monitor"></i></div>
-                            Faculty
-                            <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapseFaculty" data-bs-parent="#accordionSidenav">
-                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="./faculty-members.html">
-                                    <div class="nav-link-icon"><i data-feather="users"></i></div>
-                                    Faculty Members
-                                </a>
-                                <a class="nav-link" href="#">
-                                    <div class="nav-link-icon"><i data-feather="calendar"></i></div>
-                                    Classes
-                                </a>
-                                <a class="nav-link" href="#">
-                                    <div class="nav-link-icon"><i data-feather="book"></i></div>
-                                    Subjects
-                                </a>
-                                <a class="nav-link" href="#">
-                                    <div class="nav-link-icon"><i data-feather="home"></i></div>
-                                    Rooms
-                                </a>
-                            </nav>
-                        </div>
-
-                        <!-- <a class="nav-link" href="charts.html">
-                            <div class="nav-link-icon"><i data-feather="user"></i></div>
-                            Faculty
-                        </a> -->
-                        <!-- Sidenav Link (Tables)-->
-                        <!-- <a class="nav-link" href="tables.html">
-                            <div class="nav-link-icon"><i data-feather="filter"></i></div>
-                            Tables
-                        </a> -->
                     </div>
                 </div>
                 <!-- Sidenav Footer-->
                 <div class="sidenav-footer">
                     <div class="sidenav-footer-content">
                         <div class="sidenav-footer-subtitle">Logged in as:</div>
-                        <div class="sidenav-footer-title">Valerie Luna</div>
+                        <div class="sidenav-footer-title">Landrei Zerna</div>
                     </div>
                 </div>
             </nav>
@@ -312,13 +255,22 @@
         </div>
     </div>
 
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        if(window.matchMedia("(max-width: 767px)").matches){
+            $(".mobile-header-set").css("display", "none");
+            $(".nav-hr").css("display", "block");
+            $(".mobile-container").css("display", "block");
+        }   
+    </script>
+
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="./assets/demo/chart-area-demo.js"></script>
-    <script src="./assets/demo/chart-bar-demo.js"></script>
-    <script src="./assets/demo/chart-pie-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" ></script> -->
+    <!-- <script src="./assets/demo/chart-area-demo.js"></script> -->
+    <!-- <script src="./assets/demo/chart-bar-demo.js"></script> -->
+    <!-- <script src="./assets/demo/chart-pie-demo.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" ></script> -->
     <script src="./js/litepicker.js"></script>
 </body>
 </html>
