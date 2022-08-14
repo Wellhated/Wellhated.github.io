@@ -1,6 +1,6 @@
 $(document).ready(() => {
     if(window.matchMedia("(max-width: 767px)").matches){
-        $(".card").css("overflow", "scroll");
+        $("modal.card").css("overflow", "scroll");
         $(".card-header").css("width", "68rem");
     }
 
