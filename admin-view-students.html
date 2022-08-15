@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Faculty Members - CAA</title>
+        <title>Student Database</title>
         <link href="./css/simple-datatables-style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
@@ -212,7 +212,7 @@
                                 <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
                             </a>
                             <!-- Sidenav Menu Heading (Core)-->
-                            <div class="sidenav-menu-heading">Faculty Home</div>
+                            <div class="sidenav-menu-heading">Admin Panel</div>
                             <!-- Sidenav Accordion (Dashboard)-->
                             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false" aria-controls="collapseDashboards">
                                 <div class="nav-link-icon"><i data-feather="activity"></i></div>
@@ -227,23 +227,32 @@
                                     </a>
                                 </nav>
                             </div>
-
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><i data-feather="user"></i></div>
+                                Organizations
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>
+                                Cashier
+                                <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
+                            </a>
+    
                             <!-- Sidenav Heading (Addons)-->
                             <div class="sidenav-menu-heading">School Management</div>
                             <!-- Sidenav Link (Charts)-->
-                            <a class="nav-link" href="./faculty-view-students.html">
+                            <a class="active nav-link" href="./admin-view-students.html">
                                 <div class="nav-link-icon"><i data-feather="users"></i></div>
                                 Students
                             </a>
-
-                            <a class="active nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="true" aria-controls="collapseFaculty">
-                                <div class="active nav-link-icon"><i data-feather="monitor"></i></div>
+    
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="true" aria-controls="collapseFaculty">
+                                <div class="nav-link-icon"><i data-feather="monitor"></i></div>
                                 Faculty
                                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse show" id="collapseFaculty" data-bs-parent="#accordionSidenav">
                                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                    <a class="active nav-link" href="./faculty-members.html">
+                                    <a class="nav-link" href="./admin-faculty-members.html">
                                         <div class="nav-link-icon"><i data-feather="users"></i></div>
                                         Faculty Members
                                     </a>
@@ -261,7 +270,7 @@
                                     </a>
                                 </nav>
                             </div>
-
+    
                             <!-- <a class="nav-link" href="charts.html">
                                 <div class="nav-link-icon"><i data-feather="user"></i></div>
                                 Faculty
@@ -277,7 +286,7 @@
                     <div class="sidenav-footer">
                         <div class="sidenav-footer-content">
                             <div class="sidenav-footer-subtitle">Logged in as:</div>
-                            <div class="sidenav-footer-title">Landrei R. Zerna</div>
+                            <div class="sidenav-footer-title">Landrei Zerna</div>
                         </div>
                     </div>
                 </nav>
@@ -290,9 +299,15 @@
                                 <div class="row align-items-center justify-content-between pt-3">
                                     <div class="col-auto mb-3">
                                         <h1 class="page-header-title">
-                                            <div class="page-header-icon"><i data-feather="users"></i></div>
-                                            Faculty Members
+                                            <div class="page-header-icon"><i data-feather="database"></i></div>
+                                            Student Database
                                         </h1>
+                                    </div>
+                                    <div class="col-12 col-xl-auto mb-3">
+                                        <a class="btn btn-sm btn-light text-primary" href="#">
+                                            <i class="me-1" data-feather="user-plus"></i>
+                                            New Student
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -300,27 +315,33 @@
                     </header>
                     <!-- Main page content-->
                     <div class="container-fluid px-4">
+                        
                         <div class="card">
-                            <div class="card-body faculty">
-                                <table id="datatablesSimple">
+                            <div class="card-body student-view">
+                                <table class="e-class-event" id="datatablesSimple">
                                     <thead>
                                         <tr>
+                                            <th>Learner Reference Number</th>
                                             <th>Fullname</th>
-                                            <th>Email</th>
-                                            <th>Role / Status</th>
-                                            <th>Classes</th>
+                                            <th>Sex</th>
+                                            <th>Grade Level</th>
+                                            <th>Action</th>
+                                            <th>Account Status</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>User</th>
-                                            <th>Email</th>
-                                            <th>Role / Status</th>
-                                            <th>Classes</th>
+                                            <th>Learner Reference Number</th>
+                                            <th>Fullname</th>
+                                            <th>Sex</th>
+                                            <th>Grade Level</th>
+                                            <th>Action</th>
+                                            <th>Account Status</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <div class="modal fade" id="exampleModalXl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" style="display: none;" aria-hidden="true">
+                                        <!-- Student Info - Modal -->
+                                        <div class="modal fade" id="StudentInfoModalXl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" style="display: none;" aria-hidden="true">
                                             <div class="modal-dialog modal-xl" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -337,18 +358,19 @@
                                                                         <div class="card-header">Profile Picture</div>
                                                                         <div class="card-body text-center">
                                                                             <!-- Profile picture image-->
-                                                                            <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" />
+                                                                            <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-2.png" alt="" />
                                                                             <!-- Profile picture help block-->
                                                                             <div class="small text-muted">
                                                                                 Tags
                                                                             </div>
                                                                             <div class="small text-muted mb-4">
-                                                                                <span class="badge bg-red-soft text-red">Principal</span>
-                                                                            </div>                                                                        
+                                                                                <span class="badge bg-primary-soft text-blue">Student</span>
+                                                                                <span class="badge bg-red-soft text-red">Music & Arts Director SBO</span>
+                                                                            </div>                                                                       
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="modal-1 col-xl-8">
+                                                                <div class="col-xl-8">
                                                                     <!-- Account details card-->
                                                                     <div class="card mb-4">
                                                                         <div class="card-header">Account Details</div>
@@ -359,28 +381,28 @@
                                                                                     <!-- Form Group (first name)-->
                                                                                     <div class="col-md-4">
                                                                                         <label class="small mb-1">First name</label>
-                                                                                        <h5>First</h5>
+                                                                                        <h5>Landrei</h5>
                                                                                         <!-- <input class="form-control" id="inputFirstName" type="text" placeholder="" value="" /> -->
                                                                                     </div>
                                                                                     <div class="col-md-4">
                                                                                         <label class="small mb-1">Middle name</label>
-                                                                                        <h5>Middle</h5>
+                                                                                        <h5>Rafanan</h5>
                                                                                     </div>
                                                                                     <!-- Form Group (last name)-->
                                                                                     <div class="col-md-4">
                                                                                         <label class="small mb-1">Last name</label>
-                                                                                        <h5>Last</h5>
+                                                                                        <h5>Zerna</h5>
                                                                                     </div>
                                                                                 </div>
                                                                                 <!-- Form Group (email address)-->
                                                                                 <div class="row gx-3 mb-3">
                                                                                     <div class="col-md-6">
                                                                                         <label class="small mb-1">Email address</label>
-                                                                                        <h5>emailaddress@email.com</h5>
+                                                                                        <h5>zernalandrei@gmail.com</h5>
                                                                                     </div>
                                                                                     <div class="col-md-6">
                                                                                         <label class="small mb-1">Phone number</label>
-                                                                                        <h5>+63912345678</h5>
+                                                                                        <h5>+639455868528</h5>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row gx-3 mb-3">
@@ -390,18 +412,18 @@
                                                                                     </div> -->
                                                                                     <div class="col-md-6">
                                                                                         <label class="small mb-1">Date of Birth</label>
-                                                                                        <h5>September 25, 1984</h5>
+                                                                                        <h5>September 25, 2005</h5>
                                                                                     </div>
                                                                                     <div class="col-md-6 sbp-preview-content">
                                                                                         <label class="small mb-1">Gender</label>
-                                                                                        <h5>Female</h5>
+                                                                                        <h5>Male</h5>
                                                                                     </div>
                                                                                 </div>
                                                                                 <!-- Form Row-->
                                                                                 <div class="row gx-3 mb-3">
                                                                                     <div class="col-md-12">
                                                                                         <label class="small mb-1" for="inputOrgName">Address</label>
-                                                                                        <p>Gov. Lim Bouelvard Caldwell Adventist Academy</p>
+                                                                                        <p>G12 Purok IV-A Sta.Catalina Zamboanga City</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </form>
@@ -415,203 +437,38 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <tr>
+                                        <tr id="id-126123132542">
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
-                                                    School Principal
+                                                    126123132542
                                                 </div>
                                             </td>
-                                            <td>schoolprincipal@email.com</td>
+                                            <td>Gumbahali, Alfajr Sali</td>
+                                            <td>Male</td>
+                                            <td><span class="badge bg-orange-soft text-orange">Grade 12</span></td>
                                             <td>
-                                                <span class="badge bg-danger-soft text-red">Principal</span>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="./view-student-grade.html"><i data-feather="book-open"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#StudentInfoModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
                                             <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                <span class="badge bg-green-soft text-green">Fully Paid</span>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr id="id-306432189124">
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Jhunel Amantiad
+                                                    306432189124
                                                 </div>
                                             </td>
-                                            <td>jhunelamantiad@email.com</td>
+                                            <td>Zerna, Landrei Rafanan</td>
+                                            <td>Male</td>
+                                            <td><span class="badge bg-orange-soft text-orange">Grade 12</span></td>
                                             <td>
-                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
-                                                <span class="badge bg-purple-soft text-purple">Media Team</span>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="./view-student-grade.html"><i data-feather="book-open"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#StudentInfoModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>                   
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
                                             <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-5.png" /></div>
-                                                    Emie Amantiad
-                                                </div>
-                                            </td>
-                                            <td>emieamantiad@email.com</td>
-
-                                            <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
-                                                    Jefer Matoguina
-                                                </div>
-                                            </td>
-                                            <td>jefermatoguina@email.com</td>
-
-                                            <td>
-                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
-                                                <span class="badge bg-purple-soft text-purple">Media Team</span>
-                                            </td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-4.png" /></div>
-                                                    Juriz Matoguina
-                                                </div>
-                                            </td>
-                                            <td>jurizmatoguina@email.com</td>
-
-                                            <td>
-                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
-                                            </td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-6.png" /></div>
-                                                    Hope Geron
-                                                </div>
-                                            </td>
-                                            <td>hopegeron@email.com</td>
-
-                                            <td>
-                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
-                                                <span class="badge bg-info-soft text-info">Academic Adviser</span>
-                                            </td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
-                                                    Ian Keny Arcangel
-                                                </div>
-                                            </td>
-                                            <td>iankenyarchangel@email.com</td>
-
-                                            <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Marcelo Cedron
-                                                </div>
-                                            </td>
-                                            <td>marcelocedron@email.com</td>
-
-                                            <td>
-                                                <span class="badge bg-green-soft text-green">Cashier</span>
-                                            </td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
-                                                    Geneveb Archangel
-                                                </div>
-                                            </td>
-                                            <td>genevebarchangel@email.com</td>
-
-                                            <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Kaye Mary Guigayoma
-                                                </div>
-                                            </td>
-                                            <td>kayemaryguigayoma@email.com</td>
-
-                                            <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Shirwin Quico
-                                                </div>
-                                            </td>
-                                            <td>shirwinquico@email.com</td>
-
-                                            <td>
-                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
-                                                <span class="badge bg-pink-soft text-pink">Guidance Officer</span>
-                                            </td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Kaye Mary Guigayoma
-                                                </div>
-                                            </td>
-                                            <td>kayemaryguigayoma@email.com</td>
-
-                                            <td>
-                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
-                                                <span class="badge bg-primary-soft text-primary">Secretary</span>
-                                            </td>
-                                            <td><a href="./faculty-view-loads.html">View Loads</a></td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                <span class="badge bg-red-soft text-red">Pending Balance</span>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -634,6 +491,7 @@
                 </footer>
             </div>
         </div>
+
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script src="./js/script-new.js"></script>
 
@@ -643,5 +501,6 @@
         <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script> -->
         <script src="./js/simple-datatables.js"></script>
         <script src="./js/datatables/datatables-simple-demo.js"></script>
+
     </body>
 </html>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Instructor Classes - CAA</title>
+        <title>Faculty Members - CAA</title>
         <link href="./css/simple-datatables-style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
@@ -222,11 +222,9 @@
                             <div class="collapse" id="collapseDashboards" data-bs-parent="#accordionSidenav">
                                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                                     <a class="nav-link" href="dashboard-1.html">
-                                        Default
+                                        Class Schedules
                                         <span class="badge bg-primary-soft text-primary ms-auto">Updated</span>
                                     </a>
-                                    <a class="nav-link" href="dashboard-2.html">Multipurpose</a>
-                                    <a class="nav-link" href="dashboard-3.html">Affiliate</a>
                                 </nav>
                             </div>
                             <a class="nav-link" href="#">
@@ -242,7 +240,7 @@
                             <!-- Sidenav Heading (Addons)-->
                             <div class="sidenav-menu-heading">School Management</div>
                             <!-- Sidenav Link (Charts)-->
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./admin-view-students.html">
                                 <div class="nav-link-icon"><i data-feather="users"></i></div>
                                 Students
                             </a>
@@ -254,7 +252,7 @@
                             </a>
                             <div class="collapse show" id="collapseFaculty" data-bs-parent="#accordionSidenav">
                                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                    <a class="active nav-link" href="./faculty-members.html">
+                                    <a class="active nav-link" href="./admin-faculty-members.html">
                                         <div class="nav-link-icon"><i data-feather="users"></i></div>
                                         Faculty Members
                                     </a>
@@ -288,7 +286,7 @@
                     <div class="sidenav-footer">
                         <div class="sidenav-footer-content">
                             <div class="sidenav-footer-subtitle">Logged in as:</div>
-                            <div class="sidenav-footer-title">Landrei Zerna</div>
+                            <div class="sidenav-footer-title">Landrei R. Zerna</div>
                         </div>
                     </div>
                 </nav>
@@ -301,14 +299,14 @@
                                 <div class="row align-items-center justify-content-between pt-3">
                                     <div class="col-auto mb-3">
                                         <h1 class="page-header-title">
-                                            <div class="page-header-icon"><i data-feather="book"></i></div>
-                                            Personal Development - E-Class Record
+                                            <div class="page-header-icon"><i data-feather="users"></i></div>
+                                            Faculty Members
                                         </h1>
                                     </div>
                                     <div class="col-12 col-xl-auto mb-3">
-                                        <a class="btn btn-sm btn-light text-primary" href="user-management-add-user.html">
-                                            <i class="me-1" data-feather="save"></i>
-                                            Publish Record
+                                        <a class="btn btn-sm btn-light text-primary" href="./admin-new-faculty.html">
+                                            <i class="me-1" data-feather="user-plus"></i>
+                                            New Faculty
                                         </a>
                                     </div>
                                 </div>
@@ -317,270 +315,368 @@
                     </header>
                     <!-- Main page content-->
                     <div class="container-fluid px-4">
-                        <!-- Account page navigation-->
-                        <nav class="nav nav-borders">
-                            <a class="nav-link active ms-0" href="#">1st Quarter</a>
-                            <a class="nav-link" href="#">2nd Quarter</a>
-                            <a class="nav-link" href="#">3rd Quarter</a>
-                            <a class="nav-link" href="#">4th Quarter</a>
-                        </nav>
-                        <hr class="mt-0 mb-4" />
                         <div class="card">
-                            <div class="card-header container-fluid">Written Works <span><input class="input-header-card" type="text" value="40" id=""></span>%</div>
-                            <div class="card-body">
-                                <h6 style="text-align: center; margin-bottom: 15px;" class="page-header-title">Highest Possible Score</h6>
-                                <table id="writtenhighestTable" class="table-mobile" style="margin-bottom: 15px">
+                            <div class="card-body faculty">
+                                <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>1</th>
-                                            <th>2</th>
-                                            <th>3</th>
-                                            <th>4</th>
-                                            <th>5</th>
-                                            <th>6</th>
-                                            <th>7</th>
-                                            <th>8</th>
-                                            <th>9</th>
-                                            <th>10</th>
-                                            <th>Total</th>
-                                            <th>PS</th>
-                                            <th>WS</th>
+                                            <th>Fullname</th>
+                                            <th>Email</th>
+                                            <th>Role / Status</th>
+                                            <th>Classes</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>Email</th>
+                                            <th>Role / Status</th>
+                                            <th>Classes</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                    <div class="modal fade" id="exampleModalXl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" style="display: none;" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Student Profile</h5>
+                                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container-xl px-4 mt-4">
+                                                        <hr class="mt-0 mb-4" />
+                                                        <div class="row">
+                                                            <div class="col-xl-4">
+                                                                <!-- Profile picture card-->
+                                                                <div class="card mb-4 mb-xl-0">
+                                                                    <div class="card-header">Profile Picture</div>
+                                                                    <div class="card-body text-center">
+                                                                        <!-- Profile picture image-->
+                                                                        <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" />
+                                                                        <!-- Profile picture help block-->
+                                                                        <div class="small text-muted">
+                                                                            Tags
+                                                                        </div>
+                                                                        <div class="small text-muted mb-4">
+                                                                            <span class="badge bg-red-soft text-red">Principal</span>
+                                                                        </div>                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-1 col-xl-8">
+                                                                <!-- Account details card-->
+                                                                <div class="card mb-4">
+                                                                    <div class="card-header">Account Details</div>
+                                                                    <div class="card-body">
+                                                                        <form>
+                                                                            <!-- Form Row-->
+                                                                            <div class="row gx-3 mb-3">
+                                                                                <!-- Form Group (first name)-->
+                                                                                <div class="col-md-4">
+                                                                                    <label class="small mb-1">First name</label>
+                                                                                    <h5>First</h5>
+                                                                                    <!-- <input class="form-control" id="inputFirstName" type="text" placeholder="" value="" /> -->
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <label class="small mb-1">Middle name</label>
+                                                                                    <h5>Middle</h5>
+                                                                                </div>
+                                                                                <!-- Form Group (last name)-->
+                                                                                <div class="col-md-4">
+                                                                                    <label class="small mb-1">Last name</label>
+                                                                                    <h5>Last</h5>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Form Group (email address)-->
+                                                                            <div class="row gx-3 mb-3">
+                                                                                <div class="col-md-6">
+                                                                                    <label class="small mb-1">Email address</label>
+                                                                                    <h5>emailaddress@email.com</h5>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <label class="small mb-1">Phone number</label>
+                                                                                    <h5>+63912345678</h5>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row gx-3 mb-3">
+                                                                                <!-- <div class="col-md-4">
+                                                                                    <label class="small mb-1" for="inputBirthday">Birthday</label>
+                                                                                    <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988" />
+                                                                                </div> -->
+                                                                                <div class="col-md-6">
+                                                                                    <label class="small mb-1">Date of Birth</label>
+                                                                                    <h5>September 25, 1984</h5>
+                                                                                </div>
+                                                                                <div class="col-md-6 sbp-preview-content">
+                                                                                    <label class="small mb-1">Gender</label>
+                                                                                    <h5>Female</h5>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Form Row-->
+                                                                            <div class="row gx-3 mb-3">
+                                                                                <div class="col-md-12">
+                                                                                    <label class="small mb-1" for="inputOrgName">Address</label>
+                                                                                    <p>Gov. Lim Bouelvard Caldwell Adventist Academy</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer"><button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <input class="input-grade text-red" id="written_score1" type="text" placeholder="" value="50" />
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    School Principal
+                                                </div>
+                                            </td>
+                                            <td>schoolprincipal@email.com</td>
+                                            <td>
+                                                <span class="badge bg-danger-soft text-red">Principal</span>
+                                            </td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-yellow" id="written_score2" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-primary" id="written_score3" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-green" id="written_score4" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-yellow" id="written_score5" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-red" id="written_score6" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-green" id="written_score7" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-primary" id="written_score8" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-yellow" id="written_score9" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-red" id="written_score10" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="total" type="text" placeholder="" value="100" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="percentage" type="text" placeholder="" value="100.0" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="wpa" type="text" placeholder="" value="30%" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
-                                <hr class="mt-0 mb-4" />
-                                <table id="writtenTable" class="table-mobile" style="margin-top: 15px">
-                                    <thead>
-                                        <tr>
-                                            <th>1</th>
-                                            <th>2</th>
-                                            <th>3</th>
-                                            <th>4</th>
-                                            <th>5</th>
-                                            <th>6</th>
-                                            <th>7</th>
-                                            <th>8</th>
-                                            <th>9</th>
-                                            <th>10</th>
-                                            <th>Total</th>
-                                            <th>PS</th>
-                                            <th>WS</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
                                         <tr>
                                             <td>
-                                                <input class="input-grade text-red" id="written_score1" type="text" placeholder="" value="50" />
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                    Jhunel Amantiad
+                                                </div>
+                                            </td>
+                                            <td>jhunelamantiad@email.com</td>
+                                            <td>
+                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                <span class="badge bg-purple-soft text-purple">Media Team</span>
+                                            </td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-yellow" id="written_score2" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-primary" id="written_score3" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-green" id="written_score4" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-yellow" id="written_score5" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-red" id="written_score6" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-green" id="written_score7" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-primary" id="written_score8" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-yellow" id="written_score9" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-red" id="written_score10" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="total" type="text" placeholder="" value="100" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="percentage" type="text" placeholder="" value="100.0" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="wpa" type="text" placeholder="" value="30%" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div style="margin-top: 10px" class="card">
-                            <div class="card-header">Performance Task <span><input class="input-header-card" type="text" value="60" id=""></span>%</div>
-                            <div class="card-body">
-                                <h6 style="text-align: center; margin-bottom: 15px;" class="page-header-title">Highest Possible Score</h6>
-                                <table id="performhighestTable" class="table-mobile" style="margin-bottom: 15px">
-                                    <thead>
-                                        <tr>
-                                            <th>1</th>
-                                            <th>2</th>
-                                            <th>3</th>
-                                            <th>4</th>
-                                            <th>5</th>
-                                            <th>6</th>
-                                            <th>7</th>
-                                            <th>8</th>
-                                            <th>9</th>
-                                            <th>10</th>
-                                            <th>Total</th>
-                                            <th>PS</th>
-                                            <th>WS</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
                                         <tr>
                                             <td>
-                                                <input class="input-grade text-red" id="written_score1" type="text" placeholder="" value="50" />
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-5.png" /></div>
+                                                    Emie Amantiad
+                                                </div>
+                                            </td>
+                                            <td>emieamantiad@email.com</td>
+
+                                            <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-yellow" id="written_score2" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-primary" id="written_score3" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-green" id="written_score4" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-yellow" id="written_score5" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-red" id="written_score6" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-green" id="written_score7" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-primary" id="written_score8" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-yellow" id="written_score9" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-red" id="written_score10" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="total" type="text" placeholder="" value="100" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="percentage" type="text" placeholder="" value="100.0" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="wpa" type="text" placeholder="" value="30%" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
-                                <hr class="mt-0 mb-4" />
-                                <table id="performTable" class="table-mobile" style="margin-top: 15px">
-                                    <thead>
                                         <tr>
-                                            <th>1</th>
-                                            <th>2</th>
-                                            <th>3</th>
-                                            <th>4</th>
-                                            <th>5</th>
-                                            <th>6</th>
-                                            <th>7</th>
-                                            <th>8</th>
-                                            <th>9</th>
-                                            <th>10</th>
-                                            <th>Total</th>
-                                            <th>PS</th>
-                                            <th>WS</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
+                                                    Jefer Matoguina
+                                                </div>
+                                            </td>
+                                            <td>jefermatoguina@email.com</td>
+
+                                            <td>
+                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                <span class="badge bg-purple-soft text-purple">Media Team</span>
+                                            </td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                            </td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
                                         <tr>
                                             <td>
-                                                <input class="input-grade text-red" id="written_score1" type="text" placeholder="" value="50" />
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-4.png" /></div>
+                                                    Juriz Matoguina
+                                                </div>
+                                            </td>
+                                            <td>jurizmatoguina@email.com</td>
+
+                                            <td>
+                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                            </td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-yellow" id="written_score2" type="text" placeholder="" value="50" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-6.png" /></div>
+                                                    Hope Geron
+                                                </div>
+                                            </td>
+                                            <td>hopegeron@email.com</td>
+
+                                            <td>
+                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                <span class="badge bg-info-soft text-info">Academic Adviser</span>
+                                            </td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-primary" id="written_score3" type="text" placeholder="" value="50" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    Ian Keny Arcangel
+                                                </div>
+                                            </td>
+                                            <td>iankenyarchangel@email.com</td>
+
+                                            <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-green" id="written_score4" type="text" placeholder="" value="50" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                    Marcelo Cedron
+                                                </div>
+                                            </td>
+                                            <td>marcelocedron@email.com</td>
+
+                                            <td>
+                                                <span class="badge bg-green-soft text-green">Cashier</span>
+                                            </td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-yellow" id="written_score5" type="text" placeholder="" value="50" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
+                                                    Geneveb Archangel
+                                                </div>
+                                            </td>
+                                            <td>genevebarchangel@email.com</td>
+
+                                            <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-red" id="written_score6" type="text" placeholder="" value="50" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                    Kaye Mary Guigayoma
+                                                </div>
+                                            </td>
+                                            <td>kayemaryguigayoma@email.com</td>
+
+                                            <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-green" id="written_score7" type="text" placeholder="" value="50" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                    Shirwin Quico
+                                                </div>
+                                            </td>
+                                            <td>shirwinquico@email.com</td>
+
+                                            <td>
+                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                <span class="badge bg-pink-soft text-pink">Guidance Officer</span>
+                                            </td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-primary" id="written_score8" type="text" placeholder="" value="50" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                    Kaye Mary Guigayoma
+                                                </div>
+                                            </td>
+                                            <td>kayemaryguigayoma@email.com</td>
+
+                                            <td>
+                                                <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                <span class="badge bg-primary-soft text-primary">Secretary</span>
+                                            </td>
+                                            <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                            <td>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
                                             </td>
                                             <td>
-                                                <input class="input-grade text-yellow" id="written_score9" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input class="input-grade text-red" id="written_score10" type="text" placeholder="" value="50" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="total" type="text" placeholder="" value="100" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="percentage" type="text" placeholder="" value="100.0" />
-                                            </td>
-                                            <td>
-                                                <input disabled class="input-grade" id="wpa" type="text" placeholder="" value="30%" />
+                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -603,17 +699,14 @@
                 </footer>
             </div>
         </div>
-
-        <script src="./js/simple-datatables.js"></script>
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/script-new.js"></script>
 
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="./js/scripts.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script> -->
-
+        <script src="./js/simple-datatables.js"></script>
         <script src="./js/datatables/datatables-simple-demo.js"></script>
-        <script src="./js/jquery-3.6.0.min.js"></script>
-        <script src="./js/script-new.js"></script>
-
     </body>
 </html>
