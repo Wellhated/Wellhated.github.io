@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="197.372mm" height="62.7312mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 19737 6273"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="818" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Chisel">
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="A" horiz-adv-x="818"><path d="M780 0l-242.999 0 -35.0007 112 -213.999 0 -34.0008 -112 -229.999 0 163.833 520 -46.9998 0 69.1664 176 340 0 230 -696zm-323 271.999l-68.0004 238.001 -92.9996 -384 92.9996 145.999 68.0004 0z"/></glyph>
+   <glyph unicode="C" horiz-adv-x="655"><path d="M626 164l-51.0006 -164 -478.999 0c-12.6668,0 -25.5009,7.49999 -38.501,22.5 -12.999,15 -19.4991,29.5006 -19.4991,43.4995l0 565.001c0,16.6665 3.99969,32.9997 11.9991,48.9996 8.00051,15.9999 19.3341,24.0004 34.0008,24.0004l182 0 0 -180 57.0001 180 278 0 -63.9996 -180 -243.001 0c-2.66646,0 -5.83345,-1.50045 -9.49984,-4.50022 -3.66639,-2.99977 -5.50014,-7.49999 -5.50014,-13.5007l0 -328c0,-9.33374 5.66623,-14.0001 16.9998,-14.0001l330.001 0z"/></glyph>
+   <glyph unicode=" " horiz-adv-x="500"></glyph>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Chisel";src:url("#FontID0") format(svg)}
+    .fil0 {fill:url(#id0)}
+    .fnt0 {font-weight:normal;font-size:8910.67px;font-family:'Chisel'}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="9868.57" y1="0" x2="9868.57" y2="6273.11">
+   <stop offset="0" style="stop-opacity:1; stop-color:#0061F2"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#5315D1"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <text x="-339" y="6273"  class="fil0 fnt0">CAA </text>
+ </g>
+</svg>
