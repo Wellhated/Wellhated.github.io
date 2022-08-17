@@ -21064,3 +21064,50 @@ pre[class*=language-] {
   outline: none; 
 }
 
+.lift-no-shadow {
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.lift-no-shadow:hover {
+  transform: translateY(-0.3333333333rem);
+}
+.lift-no-shadow:active {
+  transform: none;
+}
+
+.lift-text {
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.lift-text:hover {
+  transform: translateY(-0.3333333333rem);
+  box-shadow: 0 0.5rem 2rem 0 rgba(33, 40, 50, 0.25);
+}
+.lift-text:active {
+  transform: none;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(33, 40, 50, 0.15);
+}
+
+@keyframes example {
+  0%   {}
+
+  100% {
+    background-color: white; 
+    opacity: 0.3; 
+    
+  }
+}
+
+.hoverlay {
+  background-image: url('../card-header.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hoverlay:hover {
+  /* background-color: #000; */
+  animation-name: example;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
