@@ -18616,7 +18616,8 @@ body {
 }
 
 .card-waves .card-body {
-  background-image: url("../assets/img/backgrounds/bg-waves.svg");
+  /* background-image: url("../assets/img/backgrounds/bg-waves.svg"); */
+  background-image: url("../banner-wave.svg");
 }
 
 .card-angles .card-body {
@@ -21098,16 +21099,18 @@ pre[class*=language-] {
 }
 
 .hoverlay {
-  background-image: url('../card-header.png');
+  background-image: url('../header-banner.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left;
   position: relative;
+  border-radius: 18px;
 }
 .hoverlay:hover {
   /* background-color: #000; */
-  animation-name: example;
+  /* animation-name: example;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
