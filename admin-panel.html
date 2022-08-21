@@ -8,6 +8,7 @@
     <meta name="author" content="" />
     <title>Caldwell Adventist Academy</title>
     <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/caa-media-header.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
     <script data-search-pseudo-elements defer src="./js/all.min.js" crossorigin="anonymous"></script>
     <script src="./js/feather.min.js"></script>
@@ -24,6 +25,38 @@
 
         <!-- Navbar Items-->
         <ul class="navbar-nav align-items-center ms-auto">
+            <li class="nav-item dropdown no-caret d-none d-md-block me-3">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="fw-500">Caldwell Adventist Academy</div>
+                    <!-- <i class="fas fa-chevron dropdown-arrow"></i> -->
+                    <i data-feather="arrow-right"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end py-0 me-sm-n15 me-lg-0 o-hidden animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="users"></i></div>
+                        <div>
+                            <div class="small text-gray-500">School Forum</div>
+                            Open forum for students
+                        </div>
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/components" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="activity"></i></div>
+                        <div>
+                            <div class="small text-gray-500">News & Events</div>
+                            Stay updated with CAA!
+                        </div>
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/changelog" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="play"></i></div>
+                        <div>
+                            <div class="small text-gray-500">School Blog</div>
+                            Inspiring CAA Blogs!
+                        </div>
+                    </a>
+                </div>
+            </li>
             <!-- Alerts Dropdown-->
             <li class="nav-item dropdown no-caret d-none d-sm-block me-3 dropdown-notifications">
                 <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownAlerts" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="bell"></i></a>
@@ -46,22 +79,6 @@
                         <div class="dropdown-notifications-item-content">
                             <div class="dropdown-notifications-item-content-details">December 22, 2021</div>
                             <div class="dropdown-notifications-item-content-text">A new monthly report is ready. Click here to view!</div>
-                        </div>
-                    </a>
-                    <!-- Example Alert 3-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <div class="dropdown-notifications-item-icon bg-danger"><i class="fas fa-exclamation-triangle"></i></div>
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-details">December 8, 2021</div>
-                            <div class="dropdown-notifications-item-content-text">Critical system failure, systems shutting down.</div>
-                        </div>
-                    </a>
-                    <!-- Example Alert 4-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <div class="dropdown-notifications-item-icon bg-success"><i data-feather="user-plus"></i></div>
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-details">December 2, 2021</div>
-                            <div class="dropdown-notifications-item-content-text">New user request. Woody has requested access to the organization.</div>
                         </div>
                     </a>
                     <a class="dropdown-item dropdown-notifications-footer" href="#!">View All Alerts</a>
@@ -89,22 +106,6 @@
                         <div class="dropdown-notifications-item-content">
                             <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             <div class="dropdown-notifications-item-content-details">Emily Fowler · 2d</div>
-                        </div>
-                    </a>
-                    <!-- Example Message 3-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <img class="dropdown-notifications-item-img" src="assets/img/illustrations/profiles/profile-4.png" />
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                            <div class="dropdown-notifications-item-content-details">Marshall Rosencrantz · 3d</div>
-                        </div>
-                    </a>
-                    <!-- Example Message 4-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <img class="dropdown-notifications-item-img" src="assets/img/illustrations/profiles/profile-5.png" />
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                            <div class="dropdown-notifications-item-content-details">Colby Newton · 3d</div>
                         </div>
                     </a>
                     <!-- Footer Link-->
@@ -158,29 +159,29 @@
                             <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
                         </a>
                         <!-- Sidenav Menu Heading (Core)-->
-                        <div class="sidenav-menu-heading">Admin Panel</div>
+                        <div class="sidenav-menu-heading">main page</div>
                         <!-- Sidenav Accordion (Dashboard)-->
-                        <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false" aria-controls="collapseDashboards">
+                        <a class="active nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false" aria-controls="collapseDashboards">
                             <div class="nav-link-icon"><i data-feather="activity"></i></div>
                             Dashboard
                             <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapseDashboards" data-bs-parent="#accordionSidenav">
+                        <div class="collapse show" id="collapseDashboards" data-bs-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="dashboard-1.html">
+                                <a class="active nav-link" href="#">
+                                    Instructor's Home
+                                </a>
+                                <a class="nav-link" href="#">
                                     Class Schedules
                                     <span class="badge bg-primary-soft text-primary ms-auto">Updated</span>
                                 </a>
                             </nav>
                         </div>
+
+                        <div class="sidenav-menu-heading">Organizations</div>
                         <a class="nav-link" href="#">
                             <div class="nav-link-icon"><i data-feather="user"></i></div>
-                            Organizations
-                        </a>
-                        <a class="nav-link" href="#">
-                            <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>
-                            Cashier
-                            <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
+                            School Groups
                         </a>
 
                         <!-- Sidenav Heading (Addons)-->
@@ -197,35 +198,42 @@
                             <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapseFaculty" data-bs-parent="#accordionSidenav">
-                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
+                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavMenu">
                                 <a class="nav-link" href="./admin-faculty-members.html">
                                     <div class="nav-link-icon"><i data-feather="users"></i></div>
                                     Faculty Members
                                 </a>
-                                <a class="nav-link" href="#">
-                                    <div class="nav-link-icon"><i data-feather="calendar"></i></div>
-                                    Classes
+                                <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDatabase" aria-expanded="false" aria-controls="collapseFaculty">
+                                    <div class="nav-link-icon"><i data-feather="database"></i></div>
+                                    Database
+                                    <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
                                 </a>
+                                <div class="collapse" id="collapseDatabase" data-bs-parent="#accordionSidenavMenu">
+                                    <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavMenu">
+                                        <a class="nav-link" href="#">
+                                            <div class="nav-link-icon"><i data-feather="calendar"></i></div>
+                                            Classes
+                                        </a>
+                                        <a class="nav-link" href="#">
+                                            <div class="nav-link-icon"><i data-feather="book"></i></div>
+                                            Subjects
+                                        </a>
+                                        <a class="nav-link" href="#">
+                                            <div class="nav-link-icon"><i data-feather="home"></i></div>
+                                            Rooms
+                                        </a>
+                                    </nav>
+                                </div>
                                 <a class="nav-link" href="#">
-                                    <div class="nav-link-icon"><i data-feather="book"></i></div>
-                                    Subjects
-                                </a>
-                                <a class="nav-link" href="#">
-                                    <div class="nav-link-icon"><i data-feather="home"></i></div>
-                                    Rooms
+                                    <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>
+                                    Cashier
+                                    <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
                                 </a>
                             </nav>
                         </div>
 
-                        <!-- <a class="nav-link" href="charts.html">
-                            <div class="nav-link-icon"><i data-feather="user"></i></div>
-                            Faculty
-                        </a> -->
-                        <!-- Sidenav Link (Tables)-->
-                        <!-- <a class="nav-link" href="tables.html">
-                            <div class="nav-link-icon"><i data-feather="filter"></i></div>
-                            Tables
-                        </a> -->
+
                     </div>
                 </div>
                 <!-- Sidenav Footer-->
@@ -243,12 +251,66 @@
                 <div class="container-xl px-4 mt-5">
                     <!-- Custom page header alternative example-->
                     <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
-                        <div class="me-4 mb-3 mb-sm-0">
-                            <h1 class="mb-0">Under Development</h1>
-                            <div class="small">
-                                <span class="fw-500 text-primary">Saturday</span>
-                                &middot; August 13, 2022 &middot; 12:54 AM
-                            </div>
+ 
+                        <div class="card front-page-header container-fluid mb-4 mt-5 hoverlay lift" >
+                            <a href="#">
+                                <div class="card-body p-5">
+                                    <!-- style="height: 17rem; width: 100rem;" -->
+                                    <div class="row align-items-center justify-content-between">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-4 mb-4">
+                            <!-- Dashboard example card 1-->
+                            <a class="card lift h-100" href="./admin-view-loads.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open feather-xl text-primary mb-3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package feather-xl text-primary mb-3"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> -->
+                                            <h5>My Classroom</h5>
+                                            <div class="text-muted small">View the list of your classes, e-class, and students.</div>
+                                        </div>
+                                        <img src="assets/img/illustrations/browser-stats.svg" alt="..." style="width: 8rem">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 mb-4">
+                            <!-- Dashboard example card 2-->
+                            <a class="card lift h-100" href="#!">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <!-- <i data-feather="archive"></i> -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive feather-xl text-secondary mb-3"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book feather-xl text-secondary mb-3"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> -->
+                                            <h5>Teacher's Resources</h5>
+                                            <div class="text-muted small">To keep track of teacher's records and other necessary documents</div>
+                                        </div>
+                                        <img src="assets/img/illustrations/processing.svg" alt="..." style="width: 8rem">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 mb-4">
+                            <!-- Dashboard example card 3-->
+                            <a class="card lift h-100" href="./admin-view-loads.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout feather-xl text-green mb-3"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                                            <h5>E-Class Records</h5>
+                                            <div class="text-muted small">To monitor your students performance and academic record</div>
+                                        </div>
+                                        <img src="assets/img/illustrations/windows.svg" alt="..." style="width: 8rem">
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

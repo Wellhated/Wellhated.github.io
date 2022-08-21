@@ -8,6 +8,7 @@
     <meta name="author" content="" />
     <title>Caldwell Adventist Academy</title>
     <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/caa-media-header.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
     <script data-search-pseudo-elements defer src="./js/all.min.js" ></script>
     <script src="./js/feather.min.js"></script>
@@ -21,60 +22,39 @@
         <!-- * * * * * * When using an image, we recommend the SVG format.-->
         <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
         <a href="index.html"><img style="margin-left: -40px;" height="40px" width="10px" class="navbar-brand" src="./caa-header-title.svg" alt=""></a>
-        <!-- Navbar Search Input-->
-        <!-- * * Note: * * Visible only on and above the lg breakpoint-->
-        <form class="form-inline me-auto d-none d-lg-block me-3">
-            <div class="input-group input-group-joined input-group-solid">
-                <input class="form-control pe-0" type="search" placeholder="Search" aria-label="Search" />
-                <div class="input-group-text"><i data-feather="search"></i></div>
-            </div>
-        </form>
+
         <!-- Navbar Items-->
         <ul class="navbar-nav align-items-center ms-auto">
-            <!-- Documentation Dropdown-->
             <li class="nav-item dropdown no-caret d-none d-md-block me-3">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="fw-500">CAA Portal</div>
-                    <i class="fas fa-chevron-right dropdown-arrow"></i>
+                    <div class="fw-500">Caldwell Adventist Academy</div>
+                    <!-- <i class="fas fa-chevron dropdown-arrow"></i> -->
+                    <i data-feather="arrow-right"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end py-0 me-sm-n15 me-lg-0 o-hidden animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
                     <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro" target="_blank">
-                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="book"></i></div>
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="users"></i></div>
                         <div>
-                            <div class="small text-gray-500">Documentation</div>
-                            Usage instructions and reference
+                            <div class="small text-gray-500">School Forum</div>
+                            Open forum for students
                         </div>
                     </a>
                     <div class="dropdown-divider m-0"></div>
                     <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/components" target="_blank">
-                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="code"></i></div>
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="activity"></i></div>
                         <div>
-                            <div class="small text-gray-500">Components</div>
-                            Code snippets and reference
+                            <div class="small text-gray-500">News & Events</div>
+                            Stay updated with CAA!
                         </div>
                     </a>
                     <div class="dropdown-divider m-0"></div>
                     <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/changelog" target="_blank">
-                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="file-text"></i></div>
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="play"></i></div>
                         <div>
-                            <div class="small text-gray-500">Changelog</div>
-                            Updates and changes
+                            <div class="small text-gray-500">School Blog</div>
+                            Inspiring CAA Blogs!
                         </div>
                     </a>
-                </div>
-            </li>
-            <!-- Navbar Search Dropdown-->
-            <!-- * * Note: * * Visible only below the lg breakpoint-->
-            <li class="nav-item dropdown no-caret me-3 d-lg-none">
-                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="searchDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="search"></i></a>
-                <!-- Dropdown - Search-->
-                <div class="dropdown-menu dropdown-menu-end p-3 shadow animated--fade-in-up" aria-labelledby="searchDropdown">
-                    <form class="form-inline me-auto w-100">
-                        <div class="input-group input-group-joined input-group-solid">
-                            <input class="form-control pe-0" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
-                            <div class="input-group-text"><i data-feather="search"></i></div>
-                        </div>
-                    </form>
                 </div>
             </li>
             <!-- Alerts Dropdown-->
@@ -83,7 +63,7 @@
                 <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
                     <h6 class="dropdown-header dropdown-notifications-header">
                         <i class="me-2" data-feather="bell"></i>
-                        Alerts Center
+                        News & Announcements
                     </h6>
                     <!-- Example Alert 1-->
                     <a class="dropdown-item dropdown-notifications-item" href="#!">
@@ -99,22 +79,6 @@
                         <div class="dropdown-notifications-item-content">
                             <div class="dropdown-notifications-item-content-details">December 22, 2021</div>
                             <div class="dropdown-notifications-item-content-text">A new monthly report is ready. Click here to view!</div>
-                        </div>
-                    </a>
-                    <!-- Example Alert 3-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <div class="dropdown-notifications-item-icon bg-danger"><i class="fas fa-exclamation-triangle"></i></div>
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-details">December 8, 2021</div>
-                            <div class="dropdown-notifications-item-content-text">Critical system failure, systems shutting down.</div>
-                        </div>
-                    </a>
-                    <!-- Example Alert 4-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <div class="dropdown-notifications-item-icon bg-success"><i data-feather="user-plus"></i></div>
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-details">December 2, 2021</div>
-                            <div class="dropdown-notifications-item-content-text">New user request. Woody has requested access to the organization.</div>
                         </div>
                     </a>
                     <a class="dropdown-item dropdown-notifications-footer" href="#!">View All Alerts</a>
@@ -142,22 +106,6 @@
                         <div class="dropdown-notifications-item-content">
                             <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             <div class="dropdown-notifications-item-content-details">Emily Fowler · 2d</div>
-                        </div>
-                    </a>
-                    <!-- Example Message 3-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <img class="dropdown-notifications-item-img" src="assets/img/illustrations/profiles/profile-4.png" />
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                            <div class="dropdown-notifications-item-content-details">Marshall Rosencrantz · 3d</div>
-                        </div>
-                    </a>
-                    <!-- Example Message 4-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <img class="dropdown-notifications-item-img" src="assets/img/illustrations/profiles/profile-5.png" />
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                            <div class="dropdown-notifications-item-content-details">Colby Newton · 3d</div>
                         </div>
                     </a>
                     <!-- Footer Link-->
@@ -243,21 +191,50 @@
                     <!-- Custom page header alternative example-->
                     <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
  
-                        <div class="card mb-4 mt-5 hoverlay lift">
-                            <div class="card-body p-5">
-                                <div class="row align-items-center justify-content-between " style="height: 17rem; width: 100rem;">
-                                    <!-- <div class="col">
-                                        <h2 class="text-white">Welcome back, your dashboard is ready!</h2>
-                                        <p class="text-white">Great job, your affiliate dashboard is ready to go! You can view sales, generate links, prepare coupons, and download affiliate reports using this dashboard.</p>
-
+                        <div class="card front-page-header container-fluid mb-4 mt-5 hoverlay lift" >
+                            <a href="#">
+                                <div class="card-body p-5">
+                                    <!-- style="height: 17rem; width: 100rem;" -->
+                                    <div class="row align-items-center justify-content-between">
                                     </div>
-                                    <div style="opacity: 0;" class="col d-none d-lg-block mt-xxl-n4"><img class="img-fluid px-xl-4 mt-xxl-n5" src="assets/img/illustrations/statistics.svg"></div> -->
-                                    <div class="col">
-                                    </div>
-                                    <!-- <div class="col d-none d-lg-block mt-xxl-n4" ><img class="img-fluid px-xl-4 mt-xxl-n5" src="./building-header.svg"></div> -->
                                 </div>
-                            </div>
+                            </a>
                         </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-6 mb-4">
+                            <!-- Dashboard example card 1-->
+                            <a class="card lift h-100" href="./student-enrolled-subjects.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open feather-xl text-primary mb-3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package feather-xl text-primary mb-3"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> -->
+                                            <h5>My Enrolled Subjects</h5>
+                                            <div class="text-muted small">View the list of your enrolled subjects.</div>
+                                        </div>
+                                        <img src="assets/img/illustrations/browser-stats.svg" alt="..." style="width: 8rem">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-6 mb-4">
+                            <!-- Dashboard example card 2-->
+                            <a class="card lift h-100" href="./student-cashier-account.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign feather-xl text-secondary mb-3"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                            <h5>My School Balance</h5>
+                                            <div class="text-muted small">To keep track of your account and other necessary balance</div>
+                                        </div>
+                                        <img src="assets/img/illustrations/processing.svg" alt="..." style="width: 8rem">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </main>
