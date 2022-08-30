@@ -21119,3 +21119,14 @@ pre[class*=language-] {
   background-repeat: no-repeat;
   background-image: url('../bg.svg');
 }
+
+@media only screen and (max-width: 990px) {
+  .dark-media {
+    color: #69707a;
+  }
+}
+@media only screen and (min-width: 990px) {
+  .dark-media {
+    color: white;
+  }
+}

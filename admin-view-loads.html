@@ -212,7 +212,7 @@
                                 <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
                             </a>
                             <!-- Sidenav Menu Heading (Core)-->
-                            <div class="sidenav-menu-heading">Admin Panel</div>
+                            <div class="sidenav-menu-heading">main page</div>
                             <!-- Sidenav Accordion (Dashboard)-->
                             <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false" aria-controls="collapseDashboards">
                                 <div class="nav-link-icon"><i data-feather="activity"></i></div>
@@ -221,74 +221,83 @@
                             </a>
                             <div class="collapse" id="collapseDashboards" data-bs-parent="#accordionSidenav">
                                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                    <a class="nav-link" href="dashboard-1.html">
-                                        Default
+                                    <a class="nav-link" href="./admin-panel.html">
+                                        Instructor's Home
+                                    </a>
+                                    <a class="nav-link" href="#">
+                                        Class Schedules
                                         <span class="badge bg-primary-soft text-primary ms-auto">Updated</span>
                                     </a>
-                                    <a class="nav-link" href="dashboard-2.html">Multipurpose</a>
-                                    <a class="nav-link" href="dashboard-3.html">Affiliate</a>
                                 </nav>
                             </div>
+    
+                            <div class="sidenav-menu-heading">Organizations</div>
                             <a class="nav-link" href="#">
                                 <div class="nav-link-icon"><i data-feather="user"></i></div>
-                                Organizations
-                            </a>
-                            <a class="nav-link" href="#">
-                                <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>
-                                Cashier
-                                <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
+                                School Groups
                             </a>
     
                             <!-- Sidenav Heading (Addons)-->
                             <div class="sidenav-menu-heading">School Management</div>
                             <!-- Sidenav Link (Charts)-->
-                            <a class="nav-link" href="./view-students.html">
+                            <a class="nav-link" href="./admin-view-students.html">
                                 <div class="nav-link-icon"><i data-feather="users"></i></div>
                                 Students
                             </a>
     
-                            <a class="active nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="true" aria-controls="collapseFaculty">
+                            <a class="active nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="false" aria-controls="collapseFaculty">
                                 <div class="nav-link-icon"><i data-feather="monitor"></i></div>
                                 Faculty
                                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse show" id="collapseFaculty" data-bs-parent="#accordionSidenav">
-                                <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                    <a class="active nav-link" href="./faculty-members.html">
+                                <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavMenu">
+                                    <a class="active nav-link" href="./admin-faculty-members.html">
                                         <div class="nav-link-icon"><i data-feather="users"></i></div>
                                         Faculty Members
                                     </a>
-                                    <a class="nav-link" href="#">
-                                        <div class="nav-link-icon"><i data-feather="calendar"></i></div>
-                                        Classes
+                                    <a class="nav-link" href="./admin-shared-resources.html">
+                                        <div class="nav-link-icon"><i data-feather="archive"></i></div>
+                                        Shared Resources
                                     </a>
-                                    <a class="nav-link" href="#">
-                                        <div class="nav-link-icon"><i data-feather="book"></i></div>
-                                        Subjects
+                                    <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDatabase" aria-expanded="false" aria-controls="collapseFaculty">
+                                        <div class="nav-link-icon"><i data-feather="database"></i></div>
+                                        Database
+                                        <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                        <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
                                     </a>
-                                    <a class="nav-link" href="#">
-                                        <div class="nav-link-icon"><i data-feather="home"></i></div>
-                                        Rooms
+                                    <div class="collapse" id="collapseDatabase" data-bs-parent="#accordionSidenavMenu">
+                                        <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavMenu">
+                                            <a class="nav-link" href="#">
+                                                <div class="nav-link-icon"><i data-feather="calendar"></i></div>
+                                                Classes
+                                            </a>
+                                            <a class="nav-link" href="#">
+                                                <div class="nav-link-icon"><i data-feather="book"></i></div>
+                                                Subjects
+                                            </a>
+                                            <a class="nav-link" href="#">
+                                                <div class="nav-link-icon"><i data-feather="home"></i></div>
+                                                Rooms
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link" href="./admin-cashier.html">
+                                        <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>
+                                        Cashier
+                                        <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
                                     </a>
                                 </nav>
                             </div>
     
-                            <!-- <a class="nav-link" href="charts.html">
-                                <div class="nav-link-icon"><i data-feather="user"></i></div>
-                                Faculty
-                            </a> -->
-                            <!-- Sidenav Link (Tables)-->
-                            <!-- <a class="nav-link" href="tables.html">
-                                <div class="nav-link-icon"><i data-feather="filter"></i></div>
-                                Tables
-                            </a> -->
+    
                         </div>
                     </div>
                     <!-- Sidenav Footer-->
                     <div class="sidenav-footer">
                         <div class="sidenav-footer-content">
                             <div class="sidenav-footer-subtitle">Logged in as:</div>
-                            <div class="sidenav-footer-title">Landrei Zerna</div>
+                            <div class="sidenav-footer-title">Landrei R. Zerna</div>
                         </div>
                     </div>
                 </nav>
@@ -304,22 +313,21 @@
                         </a>
                     </div>
                     <div class="card invoice">
-                        <div class="card-header p-4 p-md-5 border-bottom-0 bg-gradient-primary-to-secondary text-white-50">
+                        <div class="card-header p-4 p-md-5 border-bottom-0 header-wave-design text-white-50">
                             <div class="row justify-content-between align-items-center">
                                 <div class="col-12 col-lg-auto mb-5 mb-lg-0 text-center text-lg-start">
                                     <!-- Invoice branding-->
-                                    <div class="h1 text-white mb-0">Caldwell Adventist Academy</div>
-                                    Teaching Loads
+                                    <img class="invoice-brand-img mb-4 lift-no-shadow" style="height: 10rem; width: 10rem" src="./caa-logo-outline.svg" alt="" />
                                 </div>
                                 <div class="col-12 col-lg-auto text-center text-lg-end">
+                                    <div class="h1 text-white mb-4">Teaching Loads</div>
                                     <!-- Invoice details-->
-                                    <div class="h3 text-white">Jhunel G. Amantiad</div>
+                                    <div class="h5 text-white">Jhunel G. Amantiad</div>
                                     Grade 11 - Amethyst Adviser
                                 </div>
                             </div>
                         </div>
                         <div class="card-body p-4 p-md-5">
-                            <hr class="nav-hr mt-0 mb-4" />
                             <div class="table-responsive">
                                 <!-- Written Card-->
                                 <table class="table table-borderless mb-0">
