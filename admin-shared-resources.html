@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Instructor Classes - CAA</title>
+        <title>CAA - Shared Resources</title>
         <link href="./css/simple-datatables-style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
@@ -196,7 +196,7 @@
                         <div class="nav accordion" id="accordionSidenav">
                             <!-- Sidenav Menu Heading (Account)-->
                             <!-- * * Note: * * Visible only on and above the sm breakpoint-->
-                            <div class="sidenav-menu-heading d-sm-none">My Account</div>
+                            <div class="sidenav-menu-heading d-sm-none">Account</div>
                             <!-- Sidenav Link (Alerts)-->
                             <!-- * * Note: * * Visible only on and above the sm breakpoint-->
                             <a class="nav-link d-sm-none" href="#!">
@@ -211,20 +211,85 @@
                                 Messages
                                 <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
                             </a>
-                            <div class="mobile-container container" style="margin-top: 15px; display: none;">
-                                <hr style="display: none" class="nav-hr mt-0 mb-4" />
-                            </div>
                             <!-- Sidenav Menu Heading (Core)-->
-                            <div class="mobile-header-set sidenav-menu-heading">My Account</div>
+                            <div class="sidenav-menu-heading">main page</div>
                             <!-- Sidenav Accordion (Dashboard)-->
-                            <a class="active nav-link" href="./student-enrolled-subjects.html">
-                                <div class="nav-link-icon"><i data-feather="book-open"></i></div>
-                                Enrolled Subjects
+                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false" aria-controls="collapseDashboards">
+                                <div class="nav-link-icon"><i data-feather="activity"></i></div>
+                                Dashboard
+                                <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <a class="nav-link" href="./student-cashier-account.html">
-                                <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>
-                                Cashier Account
+                            <div class="collapse" id="collapseDashboards" data-bs-parent="#accordionSidenav">
+                                <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
+                                    <a class="active nav-link" href="#">
+                                        Instructor's Home
+                                    </a>
+                                    <a class="nav-link" href="#">
+                                        Class Schedules
+                                        <span class="badge bg-primary-soft text-primary ms-auto">Updated</span>
+                                    </a>
+                                </nav>
+                            </div>
+    
+                            <div class="sidenav-menu-heading">Organizations</div>
+                            <a class="nav-link" href="#">
+                                <div class="nav-link-icon"><i data-feather="user"></i></div>
+                                School Groups
                             </a>
+    
+                            <!-- Sidenav Heading (Addons)-->
+                            <div class="sidenav-menu-heading">School Management</div>
+                            <!-- Sidenav Link (Charts)-->
+                            <a class="nav-link" href="./admin-view-students.html">
+                                <div class="nav-link-icon"><i data-feather="users"></i></div>
+                                Students
+                            </a>
+    
+                            <a class="active nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="false" aria-controls="collapseFaculty">
+                                <div class="nav-link-icon"><i data-feather="monitor"></i></div>
+                                Faculty
+                                <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse show" id="collapseFaculty" data-bs-parent="#accordionSidenav">
+                                <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavMenu">
+                                    <a class="nav-link" href="./admin-faculty-members.html">
+                                        <div class="nav-link-icon"><i data-feather="users"></i></div>
+                                        Faculty Members
+                                    </a>
+                                    <a class="active nav-link" href="./admin-shared-resources.html">
+                                        <div class="nav-link-icon"><i data-feather="archive"></i></div>
+                                        Shared Resources
+                                    </a>
+                                    <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDatabase" aria-expanded="false" aria-controls="collapseFaculty">
+                                        <div class="nav-link-icon"><i data-feather="database"></i></div>
+                                        Database
+                                        <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                        <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
+                                    </a>
+                                    <div class="collapse" id="collapseDatabase" data-bs-parent="#accordionSidenavMenu">
+                                        <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavMenu">
+                                            <a class="nav-link" href="#">
+                                                <div class="nav-link-icon"><i data-feather="calendar"></i></div>
+                                                Classes
+                                            </a>
+                                            <a class="nav-link" href="#">
+                                                <div class="nav-link-icon"><i data-feather="book"></i></div>
+                                                Subjects
+                                            </a>
+                                            <a class="nav-link" href="#">
+                                                <div class="nav-link-icon"><i data-feather="home"></i></div>
+                                                Rooms
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link" href="#">
+                                        <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>
+                                        Cashier
+                                        <span class="badge bg-danger-soft text-danger ms-auto">Admin Only!</span>
+                                    </a>
+                                </nav>
+                            </div>
+    
     
                         </div>
                     </div>
@@ -232,105 +297,124 @@
                     <div class="sidenav-footer">
                         <div class="sidenav-footer-content">
                             <div class="sidenav-footer-subtitle">Logged in as:</div>
-                            <div class="sidenav-footer-title">Landrei Zerna</div>
+                            <div class="sidenav-footer-title">Landrei R. Zerna</div>
                         </div>
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <!-- Main page content-->
-                    <div class="container-xl px-4 mt-4">
-                       <!-- Invoice-->
-                       <div class="card invoice lift">
-                        <div class="card-header p-4 p-md-5 border-bottom-0 header-wave-design text-white-50">
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-12 col-lg-auto mb-5 mb-lg-0 text-center text-lg-start">
-                                    <!-- Invoice branding-->
-                                    <img class="invoice-brand-img mb-4 lift-no-shadow" style="height: 10rem; width: 10rem" src="./caa-logo-outline.svg" alt="" />
-                                </div>
-                                <div class="col-12 col-lg-auto text-center text-lg-end">
-                                    <div class="h1 text-white mb-4">Grading Record</div>
-                                    <!-- Invoice details-->
-                                    <div class="h5 text-white">Landrei R. Zerna</div>
-                                    G12 - STEM
+                 <!-- Main page content-->
+                 <div class="container-xl px-4 mt-4">
+                    <div class="col-12 col-xl-auto mb-3">
+                        <a class="btn btn-sm btn-light text-primary" href="./admin-faculty-members.html">
+                            <i data-feather="arrow-left"></i>
+                            Back to Dashboard
+                        </a>
+                    </div>
+                    <div class="card invoice">
+
+                        <div class="card-body p-4 p-md-5">
+                            <!-- <hr class="nav-hr mt-0 mb-4" /> -->
+                            <div class="table-responsive">
+                                <div class="container-xl px-4 mt-5">
+                                    <!-- Custom page header alternative example-->
+                                    <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
+                
+                                    <div class="row">
+                                        <div class="col-xl-4 mb-4">
+                                            <!-- Dashboard example card 1-->
+                                            <a class="card lift h-100" href="./admin-view-loads.html">
+                                                <div class="card-body d-flex justify-content-center flex-column">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="me-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open feather-xl text-primary mb-3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package feather-xl text-primary mb-3"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> -->
+                                                            <h5>Subject Modules</h5>
+                                                            <div class="text-muted small">A folder containing module files from all subjects.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-4 mb-4">
+                                            <!-- Dashboard example card 2-->
+                                            <a class="card lift h-100" href="#!">
+                                                <div class="card-body d-flex justify-content-center flex-column">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="me-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive feather-xl text-primary mb-3"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book feather-xl text-secondary mb-3"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> -->
+                                                            <h5>Classroom Resources</h5>
+                                                            <div class="text-muted small">A folder containing basic classroom resources.</div>                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-4 mb-4">
+                                            <!-- Dashboard example card 3-->
+                                            <a class="card lift h-100" href="./admin-view-loads.html">
+                                                <div class="card-body d-flex justify-content-center flex-column">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="me-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout feather-xl text-primary mb-3"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                                                            <h5>E-Class Files</h5>
+                                                            <div class="text-muted small">A folder containing the files of students performance and academic records</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-4 mb-4">
+                                            <!-- Dashboard example card 1-->
+                                            <a class="card lift h-100" href="./admin-view-loads.html">
+                                                <div class="card-body d-flex justify-content-center flex-column">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="me-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users feather-xl text-primary mb-3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                                            <h5>F2F Materials</h5>
+                                                            <div class="text-muted small">A folder containing module files from all subjects.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-4 mb-4">
+                                            <!-- Dashboard example card 2-->
+                                            <a class="card lift h-100" href="#!">
+                                                <div class="card-body d-flex justify-content-center flex-column">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="me-3">
+                                                            <!-- <i data-feather="package"></i> -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image feather-xl text-primary mb-3"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                                                            <h5>School Gallery</h5>
+                                                            <div class="text-muted small">A folder containing school infographics and other media materials.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-4 mb-4">
+                                            <!-- Dashboard example card 3-->
+                                            <a class="card lift h-100" href="./admin-view-loads.html">
+                                                <div class="card-body d-flex justify-content-center flex-column">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="me-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package feather-xl text-primary mb-3"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                                            <h5>Miscellaneous</h5>
+                                                            <div class="text-muted small">A folder containing random files</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                           <div class="card-body p-4 p-md-5">
-                               <nav class="nav nav-borders">
-                                   <a class="nav-link active ms-0" href="#">1st Qrtr</a>
-                                   <a class="nav-link" href="#">2nd Qrtr</a>
-                                   <a class="nav-link" href="#">3rd Qrtr</a>
-                                   <a class="nav-link" href="#">4th Qrtr</a>
-                               </nav>
-                               <hr class="nav-hr mt-0 mb-4" />
-                               <div class="table-responsive">
-                                   <table class="table table-borderless mb-0">
-                                       <thead class="border-bottom">
-                                           <tr class="small text-uppercase text-muted">
-                                               <th class="text-start" scope="col">Subject</th>
-                                               <th class="text-start" scope="col">1st</th>
-                                               <th class="text-start" scope="col">2nd</th>
-                                               <th class="text-start" scope="col">3rd</th>
-                                               <th class="text-start" scope="col">4th</th>
-                                               <th class="text-start" scope="col">Final</th>
-                                               <th class="text-start" scope="col">Remarks</th>
-                                           </tr>
-                                       </thead>
-                                       <tbody>
-                                           <tr class="border-bottom">
-                                               <td class="text-start fw-bold">Basic Calculus</td>
-                                               <td class="text-start fw-bold text-red">INC</td>
-                                               <td class="text-start fw-bold text-primary">88</td>
-                                               <td class="text-start fw-bold text-primary">89</td>
-                                               <td class="text-start fw-bold text-green">95</td>
-                                               <td class="text-start fw-bold text-yellow">75</td>
-                                               <td class="text-start fw-bold text-red">FAILED</td>
-                                           </tr>
-                                           <tr class="border-bottom">
-                                               <td class="text-start fw-bold">Practical Research</td>
-                                               <td class="text-start fw-bold text-red">INC</td>
-                                               <td class="text-start fw-bold text-yellow">75</td>
-                                               <td class="text-start fw-bold text-primary">88</td>
-                                               <td class="text-start fw-bold text-green">95</td>
-                                               <td class="text-start fw-bold text-primary">89</td>
-                                               <td class="text-start fw-bold text-green">PASSED</td>
-                                           </tr>
-                                           <tr class="border-bottom">
-                                               <td class="text-start fw-bold">Physical Education</td>
-                                               <td class="text-start fw-bold text-red">INC</td>
-                                               <td class="text-start fw-bold text-primary">88</td>
-                                               <td class="text-start fw-bold text-primary">89</td>
-                                               <td class="text-start fw-bold text-green">95</td>
-                                               <td class="text-start fw-bold text-yellow">75</td>
-                                               <td class="text-start fw-bold text-green">PASSED</td>
-                                           </tr>
-                                           <tr class="border-bottom">
-                                               <td class="text-start fw-bold">Filipino</td>
-                                               <td class="text-start fw-bold text-red">INC</td>
-                                               <td class="text-start fw-bold text-yellow">75</td>
-                                               <td class="text-start fw-bold text-primary">88</td>
-                                               <td class="text-start fw-bold text-green">95</td>
-                                               <td class="text-start fw-bold text-primary">89</td>
-                                               <td class="text-start fw-bold text-green">PASSED</td>
-                                           </tr>
-                                           <tr class="border-bottom">
-                                               <td class="text-start fw-bold">TLE</td>
-                                               <td class="text-start fw-bold text-red">INC</td>
-                                               <td class="text-start fw-bold text-yellow">75</td>
-                                               <td class="text-start fw-bold text-primary">88</td>
-                                               <td class="text-start fw-bold text-green">95</td>
-                                               <td class="text-start fw-bold text-primary">89</td>
-                                               <td class="text-start fw-bold text-green">PASSED</td>
-                                           </tr>
-                                       </tbody>
-                                   </table>
-                               </div>
-                           </div>
-   
-                       </div>
-                   </div>
+
+                    </div>
+                </div>
                 </main>
                 <footer class="footer-admin mt-auto footer-light">
                     <div class="container-xl px-4">
@@ -347,14 +431,18 @@
             </div>
         </div>
 
+
+
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <!-- <script src="./js/script-new.js"></script> -->
+        
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="./js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="./assets/demo/chart-area-demo.js"></script>
-        <script src="./assets/demo/chart-bar-demo.js"></script>
-        <script src="./assets/demo/chart-pie-demo.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
-        <script src="./js/litepicker.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script> -->
+        <script src="./js/simple-datatables.js"></script>
+        <script src="./js/datatables/datatables-simple-demo.js"></script>
+    
 
     </body>
 </html>

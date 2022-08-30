@@ -1,6 +1,86 @@
+@media only screen and (min-width: 320px) {
+    .front-page-header {
+        height: 18rem;
+        width: 16.6rem;
+        background-position: center;
+    }
+    .hoverlay {
+        /* background-size: 250px 250px; */
+        background-size: 25rem;
+        background-image: url('../banner-logo-mobile.svg');
+    }
+    .header-wave-design {
+        display: none;
+    }
+}
+@media only screen and (min-width: 375px) {
+    .front-page-header {
+        height: 18rem;
+        width: 20rem;
+    }
+    .hoverlay {
+        /* background-size: 250px 250px; */
+        background-size: 25rem;
+        background-image: url('../banner-logo-mobile.svg');
+    }
+}
+@media only screen and (min-width: 425px) {
+    .front-page-header {
+        height: 21.5rem;
+        width: 23.4rem;
+    }
+    .hoverlay {
+        /* background-size: 250px 250px; */
+        background-size: 30rem;
+        background-image: url('../banner-logo-mobile.svg');
+    }
+}
+@media only screen and (min-width: 480px) {
+    .front-page-header {
+        height: 21.5rem;
+        width: 27rem;
+    }
+    .hoverlay {
+        /* background-size: 250px 250px; */
+        background-size: 30rem;
+        background-image: url('../banner-logo-mobile.svg');
+    }
+}
+@media only screen and (min-width: 768px) {
+    .front-page-header {
+        height: 21.5rem;
+        width: 100rem;
+        background-position: left;
+    }
+    .hoverlay {
+        background-position: left;
+        background-size: cover;
+        background-image: url('../header-banner.svg');
+    }
+}
 @media only screen and (min-width: 900px) {
     .front-page-header {
         height: 21.5rem;
-        width: 100%;
+        width: 100rem;
+        background-position: left;
+    }
+    .hoverlay {
+        /* background-size: 250px 250px; */
+        background-size: cover;
+        background-color: white;
+        background-image: url('../header-banner.svg');
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .front-page-header {
+        height: 21.5rem;
+        width: 100rem;
+        background-position: left;
+    }
+    .hoverlay {
+        /* background-size: 250px 250px; */
+        background-size: cover;
+        background-color: white;
+        background-image: url('../header-banner.svg');
     }
 }

@@ -21113,3 +21113,9 @@ pre[class*=language-] {
   animation-iteration-count: 1;
   animation-fill-mode: forwards; */
 }
+.header-wave-design {
+  background-size: cover;
+  background-position: 0 -15px;
+  background-repeat: no-repeat;
+  background-image: url('../bg.svg');
+}
