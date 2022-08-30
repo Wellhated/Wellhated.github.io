@@ -1,56 +1,69 @@
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 375px) {
     .front-page-header {
         height: 18rem;
-        width: 16.6rem;
+        width: 100%;
         background-position: center;
     }
     .hoverlay {
         /* background-size: 250px 250px; */
-        background-size: 25rem;
-        background-image: url('../banner-logo-mobile.svg');
+        background-size: 35rem;
+        background-image: url('../full-logo.svg');
     }
     .header-wave-design {
         display: none;
     }
 
 }
+
 @media only screen and (min-width: 375px) {
     .front-page-header {
         height: 18rem;
-        width: 20rem;
+        width: 100%;
     }
     .hoverlay {
         /* background-size: 250px 250px; */
-        background-size: 25rem;
-        background-image: url('../banner-logo-mobile.svg');
+        background-size: 35rem;
+        background-image: url('../full-logo.svg');
     }
 }
 @media only screen and (min-width: 425px) {
     .front-page-header {
         height: 21.5rem;
-        width: 23.4rem;
+        width: 100%;
     }
     .hoverlay {
         /* background-size: 250px 250px; */
-        background-size: 30rem;
-        background-image: url('../banner-logo-mobile.svg');
+        background-size: 45rem;
+        background-image: url('../full-logo.svg');
     }
 }
 @media only screen and (min-width: 480px) {
     .front-page-header {
         height: 21.5rem;
-        width: 27rem;
+        width: 100%;
     }
     .hoverlay {
         /* background-size: 250px 250px; */
-        background-size: 30rem;
-        background-image: url('../banner-logo-mobile.svg');
+        background-size: 45rem;
+        background-image: url('../full-logo.svg');
     }
 }
+/* @media only screen and (min-width: 520px) {
+    .front-page-header {
+        height: 21.5rem;
+        width: 100%;
+        background-position: left;
+    }
+    .hoverlay {
+        background-position: center;
+        background-size: cover;
+        background-image: url('../header-banner.svg');
+    }
+} */
 @media only screen and (min-width: 768px) {
     .front-page-header {
         height: 21.5rem;
-        width: 100rem;
+        width: 100%;
         background-position: left;
     }
     .hoverlay {
@@ -62,7 +75,7 @@
 @media only screen and (min-width: 900px) {
     .front-page-header {
         height: 21.5rem;
-        width: 100rem;
+        width: 100%;
         background-position: left;
     }
     .hoverlay {
@@ -75,7 +88,7 @@
 @media only screen and (min-width: 1440px) {
     .front-page-header {
         height: 21.5rem;
-        width: 100rem;
+        width: 100%;
         background-position: left;
     }
     .hoverlay {
