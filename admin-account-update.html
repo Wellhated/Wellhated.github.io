@@ -307,220 +307,425 @@
                     </div>
                 </header>
                 <!-- Main page content-->
-                <div class="container-xl px-4 mt-4">
-                    <!-- New Transaction Modal -->
-                    <div class="modal fade" id="newTransaction" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">New Transaction</h5>
-                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="row container-fluid">
+                    <div class="col-xxl-8">
+                        <div class="container-xl px-4 mt-4">
+                            <!-- New Transaction Modal -->
+                            <div class="modal fade" id="newTransaction" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">New Transaction</h5>
+                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-green bg-green-soft text-green" type="button" data-bs-dismiss="modal">Save Changes</button>
+                                            <button class="btn btn-primary bg-blue-soft text-blue" type="button" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    
+                            </div>
+                            <!-- Edit Transaction Modal -->
+                            <div class="modal fade" id="editTransaction" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Edit Transaction</h5>
+                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-green bg-green-soft text-green" type="button" data-bs-dismiss="modal">Save Changes</button>
+                                            <button class="btn btn-primary bg-blue-soft text-blue" type="button" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-green bg-green-soft text-green" type="button" data-bs-dismiss="modal">Save Changes</button>
-                                    <button class="btn btn-primary bg-blue-soft text-blue" type="button" data-bs-dismiss="modal">Close</button>
+                            </div>
+                            <!-- Delete Transaction Modal -->
+                            <div class="modal fade" id="deleteTransaction" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Delete Transaction</h5>
+                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Delete transaction?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary bg-blue-soft text-blue" type="button" data-bs-dismiss="modal">Cancel</button>
+                                            <button class="btn btn-red bg-red-soft text-red" type="button" data-bs-dismiss="modal">Delete Transaction</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card invoice lift">
+                                <div class="card-header bg-white">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-12 text-center text-lg-end">
+                                            <!-- <a class="btn btn-sm btn-light text-blue" data-bs-toggle="modal" data-bs-target="#exampleModalSm">
+                                                <i class="me-1" data-feather="plus"></i>
+                                                New Transaction
+                                            </a> -->
+                                            <button  class="btn btn-sm btn-light text-blue" data-bs-toggle="modal" data-bs-target="#newTransaction">
+                                                <i class="me-1" data-feather="plus"></i>
+                                                New Transaction
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-alignment card-body p-4 p-md-5">
+                                    <!-- Invoice table-->
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless mb-0">
+                                            <thead class="border-bottom">
+                                                <tr class="small text-uppercase text-muted">
+                                                    <th class="text-start" scope="col">Date</th>
+                                                    <th class="text-start" scope="col">Description</th>
+                                                    <th class="text-start" scope="col">Debits</th>
+                                                    <th class="text-start" scope="col">Credits</th>
+                                                    <th class="text-start" scope="col">Balance</th>
+                                                    <th class="text-start" scope="col">Post</th>
+                                                    <th class="text-center" scope="col">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Invoice item 1-->
+                                                <tr class="border-bottom">
+                                                    <td class="text-start fw-bold">04/01/20</td>
+                                                    <td>
+                                                        <div class="fw-bold">Beginning Balance</div>
+                                                        <!-- <div class="small text-muted d-none d-md-block">Beginning Balance of tuition description.</div> -->
+                                                    </td>
+                                                    <td class="text-start fw-bold">₱ 7,565.00</td>
+                                                    <td class="text-start fw-bold"></td>
+                                                    <td class="text-start fw-bold">₱ 7,565.00</td>
+                                                    <td class="text-start fw-bold">No</td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
+                                                    </td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <!-- Invoice item 2-->
+                                                <tr class="border-bottom">
+                                                    <td class="text-start fw-bold">07/01/20</td>
+                                                    <td>
+                                                        <div class="fw-bold">Tuition</div>
+                                                        <!-- <div class="small text-muted d-none d-md-block">Tuition description</div> -->
+                                                    </td>
+                                                    <td class="text-start fw-bold">₱ 12,940.00</td>
+                                                    <td class="text-start fw-bold"></td>
+                                                    <td class="text-start fw-bold">₱ 20,505.00</td>
+                                                    <td class="text-start fw-bold">No</td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
+                                                    </td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <!-- Invoice item 3-->
+                                                <tr class="border-bottom">
+                                                    <td class="text-start fw-bold">07/01/20</td>
+                                                    <td>
+                                                        <div class="fw-bold">Online/Offline Learning</div>
+                                                        <!-- <div class="small text-muted d-none d-md-block">Online/Offline Learning description</div> -->
+                                                    </td>
+                                                    <td class="text-start fw-bold">₱ 7,400.00</td>
+                                                    <td class="text-start fw-bold"></td>
+                                                    <td class="text-start fw-bold">₱ 27,905.00</td>
+                                                    <td class="text-start fw-bold">No</td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
+                                                    </td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <!-- Invoice item 4-->
+                                                <tr class="border-bottom">
+                                                    <td class="text-start fw-bold">07/01/20</td>
+                                                    <td>
+                                                        <div class="fw-bold">General Fees</div>
+                                                        <!-- <div class="small text-muted d-none d-md-block">General Fees description</div> -->
+                                                    </td>
+                                                    <td class="text-start fw-bold">₱ 2,000.00</td>
+                                                    <td class="text-start fw-bold"></td>
+                                                    <td class="text-start fw-bold">₱ 29,905.00</td>
+                                                    <td class="text-start fw-bold">No</td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
+                                                    </td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <!-- Invoice item 4-->
+                                                <tr class="border-bottom">
+                                                    <td class="text-start fw-bold">07/01/20</td>
+                                                    <td>
+                                                        <div class="fw-bold">HSF</div>
+                                                        <!-- <div class="small text-muted d-none d-md-block">HSF Description.</div> -->
+                                                    </td>
+                                                    <td class="text-start fw-bold">₱ 250.00</td>
+                                                    <td class="text-start fw-bold"></td>
+                                                    <td class="text-start fw-bold">₱ 30,155.00</td>
+                                                    <td class="text-start fw-bold">No</td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
+                                                    </td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <!-- Invoice item 5-->
+                                                <tr class="border-bottom">
+                                                    <td class="text-start fw-bold">09/08/20</td>
+                                                    <td>
+                                                        <div class="fw-bold text-red">Payment</div>
+                                                    </td>
+                                                    <td class="text-start fw-bold"></td>
+                                                    <td class="text-start fw-bold">₱ 3000.00</td>
+                                                    <td class="text-start fw-bold">₱ 27,155.00</td>
+                                                    <td class="text-start fw-bold">No</td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
+                                                    </td>
+                                                    <td class="text-center fw-bold">
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <!-- Invoice subtotal-->
+                                                <tr>
+                                                    <td class="text-end pb-0" colspan="4"><div class="text-uppercase small fw-700 text-muted">Account Totals:</div></td>
+                                                    <td class="text-start pb-0"><div class="h5 mb-0 fw-700">₱ 27,155.00</div></td>
+                                                </tr>
+                                                <!-- Invoice tax column-->
+                                                <tr>
+                                                    <td class="text-end pb-0" colspan="4"><div class="text-uppercase small fw-700 text-muted">ESC Grantee ( <span class="text-red">- ₱ 11,000.00</span> ):</div></td>
+                                                    <td class="text-start pb-0"><div class="h5 mb-0 fw-700"><span class="text-red">₱ 11,000.00</span></div></td>
+                                                </tr>
+                                                <!-- Invoice total-->
+                                                <tr>
+                                                    <td class="text-end pb-0" colspan="4"><div class="text-uppercase small fw-700 text-muted">Total Balance Due:</div></td>
+                                                    <td class="text-start pb-0"><div class="h5 mb-0 fw-700 text-green">₱ 16,155.00</div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Edit Transaction Modal -->
-                    <div class="modal fade" id="editTransaction" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Edit Transaction</h5>
-                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="col-xxl-4">
+                        <div class="container-xl px-4 mt-4">
+                            <div class="card invoice lift">
+                                <div class="card-header bg-white">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-12 text-center text-lg-start">
+                                            Recent Payments
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    
+                                <div class="table-alignment card-body p-4 p-md-5">
+                                    <!-- Item 1-->
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                            <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" alt=""></div>
+                                            <div class="d-flex flex-column fw-bold">
+                                                <a class="text-dark line-height-normal mb-1" href="#!">View Account</a>
+                                                <div class="small text-muted line-height-normal">Position</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown no-caret">
+                                            <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople1" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+                                            <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople1">
+                                                <a class="dropdown-item" href="#!">Action</a>
+                                                <a class="dropdown-item" href="#!">Another action</a>
+                                                <a class="dropdown-item" href="#!">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item 2-->
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                            <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" alt=""></div>
+                                            <div class="d-flex flex-column fw-bold">
+                                                <a class="text-dark line-height-normal mb-1" href="#!">Keelan Garza</a>
+                                                <div class="small text-muted line-height-normal">Position</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown no-caret">
+                                            <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople2" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+                                            <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople2">
+                                                <a class="dropdown-item" href="#!">Action</a>
+                                                <a class="dropdown-item" href="#!">Another action</a>
+                                                <a class="dropdown-item" href="#!">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item 3-->
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                            <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" alt=""></div>
+                                            <div class="d-flex flex-column fw-bold">
+                                                <a class="text-dark line-height-normal mb-1" href="#!">Kaia Smyth</a>
+                                                <div class="small text-muted line-height-normal">Position</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown no-caret">
+                                            <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople3" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+                                            <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople3">
+                                                <a class="dropdown-item" href="#!">Action</a>
+                                                <a class="dropdown-item" href="#!">Another action</a>
+                                                <a class="dropdown-item" href="#!">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item 4-->
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                            <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-4.png" alt=""></div>
+                                            <div class="d-flex flex-column fw-bold">
+                                                <a class="text-dark line-height-normal mb-1" href="#!">Kerri Kearney</a>
+                                                <div class="small text-muted line-height-normal">Position</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown no-caret">
+                                            <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople4" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+                                            <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople4">
+                                                <a class="dropdown-item" href="#!">Action</a>
+                                                <a class="dropdown-item" href="#!">Another action</a>
+                                                <a class="dropdown-item" href="#!">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item 5-->
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                            <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-5.png" alt=""></div>
+                                            <div class="d-flex flex-column fw-bold">
+                                                <a class="text-dark line-height-normal mb-1" href="#!">Georgina Findlay</a>
+                                                <div class="small text-muted line-height-normal">Position</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown no-caret">
+                                            <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople5" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+                                            <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople5">
+                                                <a class="dropdown-item" href="#!">Action</a>
+                                                <a class="dropdown-item" href="#!">Another action</a>
+                                                <a class="dropdown-item" href="#!">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item 6-->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                            <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-6.png" alt=""></div>
+                                            <div class="d-flex flex-column fw-bold">
+                                                <a class="text-dark line-height-normal mb-1" href="#!">Wilf Ingram</a>
+                                                <div class="small text-muted line-height-normal">Position</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown no-caret">
+                                            <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople6" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+                                            <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople6">
+                                                <a class="dropdown-item" href="#!">Action</a>
+                                                <a class="dropdown-item" href="#!">Another action</a>
+                                                <a class="dropdown-item" href="#!">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-green bg-green-soft text-green" type="button" data-bs-dismiss="modal">Save Changes</button>
-                                    <button class="btn btn-primary bg-blue-soft text-blue" type="button" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        <div class="container-xl mb-4 mt-4">
+                            <!-- Dashboard activity timeline example-->
+                            <div class="card card-header-actions h-100">
+                                <div class="card-header bg-white">
+                                    Recent Activity
+                                    <div class="dropdown no-caret">
+                                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical text-gray-500"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+                                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownMenuButton">
+                                            <h6 class="dropdown-header">Filter Activity:</h6>
+                                            <a class="dropdown-item" href="#!"><span class="badge bg-green-soft text-green my-1">Commerce</span></a>
+                                            <a class="dropdown-item" href="#!"><span class="badge bg-blue-soft text-blue my-1">Reporting</span></a>
+                                            <a class="dropdown-item" href="#!"><span class="badge bg-yellow-soft text-yellow my-1">Server</span></a>
+                                            <a class="dropdown-item" href="#!"><span class="badge bg-purple-soft text-purple my-1">Users</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="timeline timeline-xs">
+                                        <!-- Timeline Item 1-->
+                                        <div class="timeline-item">
+                                            <div class="timeline-item-marker">
+                                                <div class="timeline-item-marker-text">27 min</div>
+                                                <div class="timeline-item-marker-indicator bg-green"></div>
+                                            </div>
+                                            <div class="timeline-item-content">
+                                                New order placed!
+                                                <a class="fw-bold text-dark" href="#!">Order #2912</a>
+                                                has been successfully placed.
+                                            </div>
+                                        </div>
+                                        <!-- Timeline Item 2-->
+                                        <div class="timeline-item">
+                                            <div class="timeline-item-marker">
+                                                <div class="timeline-item-marker-text">58 min</div>
+                                                <div class="timeline-item-marker-indicator bg-blue"></div>
+                                            </div>
+                                            <div class="timeline-item-content">
+                                                Your
+                                                <a class="fw-bold text-dark" href="#!">weekly report</a>
+                                                has been generated and is ready to view.
+                                            </div>
+                                        </div>
+                                        <!-- Timeline Item 4-->
+                                        <div class="timeline-item">
+                                            <div class="timeline-item-marker">
+                                                <div class="timeline-item-marker-text">1 day</div>
+                                                <div class="timeline-item-marker-indicator bg-yellow"></div>
+                                            </div>
+                                            <div class="timeline-item-content">Server activity monitor alert</div>
+                                        </div>
+                                        <!-- Timeline Item 5-->
+                                        <div class="timeline-item">
+                                            <div class="timeline-item-marker">
+                                                <div class="timeline-item-marker-text">1 day</div>
+                                                <div class="timeline-item-marker-indicator bg-red"></div>
+                                            </div>
+                                            <div class="timeline-item-content">
+                                                New order placed!
+                                                <a class="fw-bold text-dark" href="#!">Order #2911</a>
+                                                has been successfully removed.
+                                            </div>
+                                        </div>
+                                        <!-- Timeline Item 7-->
+                                        <div class="timeline-item">
+                                            <div class="timeline-item-marker">
+                                                <div class="timeline-item-marker-text">2 days</div>
+                                                <div class="timeline-item-marker-indicator bg-secondary"></div>
+                                            </div>
+                                            <div class="timeline-item-content">
+                                                New order placed!
+                                                <a class="fw-bold text-dark" href="#!">Order #2910</a>
+                                                has been successfully placed.
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Delete Transaction Modal -->
-                    <div class="modal fade" id="deleteTransaction" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Delete Transaction</h5>
-                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Delete transaction?
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary bg-blue-soft text-blue" type="button" data-bs-dismiss="modal">Cancel</button>
-                                    <button class="btn btn-red bg-red-soft text-red" type="button" data-bs-dismiss="modal">Delete Transaction</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card invoice lift">
-                        <div class="card-header bg-white">
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-12 text-center text-lg-end">
-                                    <!-- <a class="btn btn-sm btn-light text-blue" data-bs-toggle="modal" data-bs-target="#exampleModalSm">
-                                        <i class="me-1" data-feather="plus"></i>
-                                        New Transaction
-                                    </a> -->
-                                    <button  class="btn btn-sm btn-light text-blue" data-bs-toggle="modal" data-bs-target="#newTransaction">
-                                        <i class="me-1" data-feather="plus"></i>
-                                        New Transaction
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-alignment card-body p-4 p-md-5">
-                            <!-- Invoice table-->
-                            <div class="table-responsive">
-                                <table class="table table-borderless mb-0">
-                                    <thead class="border-bottom">
-                                        <tr class="small text-uppercase text-muted">
-                                            <th class="text-start" scope="col">Date</th>
-                                            <th class="text-start" scope="col">Description</th>
-                                            <th class="text-start" scope="col">Debits</th>
-                                            <th class="text-start" scope="col">Credits</th>
-                                            <th class="text-start" scope="col">Balance</th>
-                                            <th class="text-start" scope="col">Post</th>
-                                            <th class="text-center" scope="col">Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- Invoice item 1-->
-                                        <tr class="border-bottom">
-                                            <td class="text-start fw-bold">04/01/20</td>
-                                            <td>
-                                                <div class="fw-bold">Beginning Balance</div>
-                                                <!-- <div class="small text-muted d-none d-md-block">Beginning Balance of tuition description.</div> -->
-                                            </td>
-                                            <td class="text-start fw-bold">₱ 7,565.00</td>
-                                            <td class="text-start fw-bold"></td>
-                                            <td class="text-start fw-bold">₱ 7,565.00</td>
-                                            <td class="text-start fw-bold">No</td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
-                                            </td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <!-- Invoice item 2-->
-                                        <tr class="border-bottom">
-                                            <td class="text-start fw-bold">07/01/20</td>
-                                            <td>
-                                                <div class="fw-bold">Tuition</div>
-                                                <!-- <div class="small text-muted d-none d-md-block">Tuition description</div> -->
-                                            </td>
-                                            <td class="text-start fw-bold">₱ 12,940.00</td>
-                                            <td class="text-start fw-bold"></td>
-                                            <td class="text-start fw-bold">₱ 20,505.00</td>
-                                            <td class="text-start fw-bold">No</td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
-                                            </td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <!-- Invoice item 3-->
-                                        <tr class="border-bottom">
-                                            <td class="text-start fw-bold">07/01/20</td>
-                                            <td>
-                                                <div class="fw-bold">Online/Offline Learning</div>
-                                                <!-- <div class="small text-muted d-none d-md-block">Online/Offline Learning description</div> -->
-                                            </td>
-                                            <td class="text-start fw-bold">₱ 7,400.00</td>
-                                            <td class="text-start fw-bold"></td>
-                                            <td class="text-start fw-bold">₱ 27,905.00</td>
-                                            <td class="text-start fw-bold">No</td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
-                                            </td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <!-- Invoice item 4-->
-                                        <tr class="border-bottom">
-                                            <td class="text-start fw-bold">07/01/20</td>
-                                            <td>
-                                                <div class="fw-bold">General Fees</div>
-                                                <!-- <div class="small text-muted d-none d-md-block">General Fees description</div> -->
-                                            </td>
-                                            <td class="text-start fw-bold">₱ 2,000.00</td>
-                                            <td class="text-start fw-bold"></td>
-                                            <td class="text-start fw-bold">₱ 29,905.00</td>
-                                            <td class="text-start fw-bold">No</td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
-                                            </td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <!-- Invoice item 4-->
-                                        <tr class="border-bottom">
-                                            <td class="text-start fw-bold">07/01/20</td>
-                                            <td>
-                                                <div class="fw-bold">HSF</div>
-                                                <!-- <div class="small text-muted d-none d-md-block">HSF Description.</div> -->
-                                            </td>
-                                            <td class="text-start fw-bold">₱ 250.00</td>
-                                            <td class="text-start fw-bold"></td>
-                                            <td class="text-start fw-bold">₱ 30,155.00</td>
-                                            <td class="text-start fw-bold">No</td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
-                                            </td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <!-- Invoice item 5-->
-                                        <tr class="border-bottom">
-                                            <td class="text-start fw-bold">09/08/20</td>
-                                            <td>
-                                                <div class="fw-bold text-red">Payment</div>
-                                            </td>
-                                            <td class="text-start fw-bold"></td>
-                                            <td class="text-start fw-bold">₱ 3000.00</td>
-                                            <td class="text-start fw-bold">₱ 27,155.00</td>
-                                            <td class="text-start fw-bold">No</td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#editTransaction" href="#!"><i data-feather="edit"></i></a>
-                                            </td>
-                                            <td class="text-center fw-bold">
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#deleteTransaction"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <!-- Invoice subtotal-->
-                                        <tr>
-                                            <td class="text-end pb-0" colspan="4"><div class="text-uppercase small fw-700 text-muted">Account Totals:</div></td>
-                                            <td class="text-start pb-0"><div class="h5 mb-0 fw-700">₱ 27,155.00</div></td>
-                                        </tr>
-                                        <!-- Invoice tax column-->
-                                        <tr>
-                                            <td class="text-end pb-0" colspan="4"><div class="text-uppercase small fw-700 text-muted">ESC Grantee ( <span class="text-red">- ₱ 11,000.00</span> ):</div></td>
-                                            <td class="text-start pb-0"><div class="h5 mb-0 fw-700"><span class="text-red">₱ 11,000.00</span></div></td>
-                                        </tr>
-                                        <!-- Invoice total-->
-                                        <tr>
-                                            <td class="text-end pb-0" colspan="4"><div class="text-uppercase small fw-700 text-muted">Total Balance Due:</div></td>
-                                            <td class="text-start pb-0"><div class="h5 mb-0 fw-700 text-green">₱ 16,155.00</div></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
 
-                    </div>
                 </div>
             </main>
             <footer class="footer-admin mt-auto footer-light">
