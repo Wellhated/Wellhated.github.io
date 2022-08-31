@@ -21130,3 +21130,11 @@ pre[class*=language-] {
     color: white;
   }
 }
+
+
+@media (min-width: 1500px) {
+  .sidebar {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
