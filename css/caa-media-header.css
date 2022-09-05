@@ -96,5 +96,7 @@
         background-size: cover;
         background-color: white;
         background-image: url('../header-banner.svg');
+        background-position: left;
+        background-size: cover;
     }
 }

@@ -21138,3 +21138,7 @@ pre[class*=language-] {
     width: 25%;
   }
 }
+
+.timeline-item-adjust {
+  transform: translateX(-1.625rem);
+}

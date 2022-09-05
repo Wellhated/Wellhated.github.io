@@ -264,330 +264,421 @@
                             </div>
                         </div>
                     </header>
-                    <!-- Main page content-->
-                    <div class="container-fluid px-4">
-                        <div class="card">
-                            <div class="card-body faculty">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>Students</th>
-                                            <th>Status</th>
-                                            <th>ESC Grantee</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Students</th>
-                                            <th>Status</th>
-                                            <th>ESC Grantee</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </tfoot>
-                                    <!-- New transaction modal -->
-                                    <div class="modal fade" id="exampleModalXl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" style="display: none;" aria-hidden="true">
-                                        <div class="modal-dialog modal-xl" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Student Profile</h5>
-                                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="container-xl px-4 mt-4">
-                                                        <hr class="mt-0 mb-4" />
-                                                        <div class="row">
-                                                            <div class="col-xl-4">
-                                                                <!-- Profile picture card-->
-                                                                <div class="card mb-4 mb-xl-0">
-                                                                    <div class="card-header">Profile Picture</div>
-                                                                    <div class="card-body text-center">
-                                                                        <!-- Profile picture image-->
-                                                                        <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" />
-                                                                        <!-- Profile picture help block-->
-                                                                        <div class="small text-muted">
-                                                                            Tags
+                    <div class="row container-fluid">
+                        <div class="col-xl-9 container-fluid">
+                            <!-- Main page content-->
+                            <div class="container-fluid px-4">
+                                <div class="card">
+                                    <div class="card-body faculty">
+                                        <table id="datatablesSimple">
+                                            <thead>
+                                                <tr>
+                                                    <th>Students</th>
+                                                    <th>Status</th>
+                                                    <th>ESC Grantee</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Students</th>
+                                                    <th>Status</th>
+                                                    <th>ESC Grantee</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </tfoot>
+                                            <!-- New transaction modal -->
+                                            <div class="modal fade" id="exampleModalXl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" style="display: none;" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Student Profile</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="container-xl px-4 mt-4">
+                                                                <hr class="mt-0 mb-4" />
+                                                                <div class="row">
+                                                                    <div class="col-xl-4">
+                                                                        <!-- Profile picture card-->
+                                                                        <div class="card mb-4 mb-xl-0">
+                                                                            <div class="card-header">Profile Picture</div>
+                                                                            <div class="card-body text-center">
+                                                                                <!-- Profile picture image-->
+                                                                                <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" />
+                                                                                <!-- Profile picture help block-->
+                                                                                <div class="small text-muted">
+                                                                                    Tags
+                                                                                </div>
+                                                                                <div class="small text-muted mb-4">
+                                                                                    <span class="badge bg-red-soft text-red">Principal</span>
+                                                                                </div>                                                                        
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="small text-muted mb-4">
-                                                                            <span class="badge bg-red-soft text-red">Principal</span>
-                                                                        </div>                                                                        
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-1 col-xl-8">
-                                                                <!-- Account details card-->
-                                                                <div class="card mb-4">
-                                                                    <div class="card-header">Account Details</div>
-                                                                    <div class="card-body">
-                                                                        <form>
-                                                                            <!-- Form Row-->
-                                                                            <div class="row gx-3 mb-3">
-                                                                                <!-- Form Group (first name)-->
-                                                                                <div class="col-md-4">
-                                                                                    <label class="small mb-1">First name</label>
-                                                                                    <h5>First</h5>
-                                                                                    <!-- <input class="form-control" id="inputFirstName" type="text" placeholder="" value="" /> -->
-                                                                                </div>
-                                                                                <div class="col-md-4">
-                                                                                    <label class="small mb-1">Middle name</label>
-                                                                                    <h5>Middle</h5>
-                                                                                </div>
-                                                                                <!-- Form Group (last name)-->
-                                                                                <div class="col-md-4">
-                                                                                    <label class="small mb-1">Last name</label>
-                                                                                    <h5>Last</h5>
-                                                                                </div>
+                                                                    <div class="modal-1 col-xl-8">
+                                                                        <!-- Account details card-->
+                                                                        <div class="card mb-4">
+                                                                            <div class="card-header">Account Details</div>
+                                                                            <div class="card-body">
+                                                                                <form>
+                                                                                    <!-- Form Row-->
+                                                                                    <div class="row gx-3 mb-3">
+                                                                                        <!-- Form Group (first name)-->
+                                                                                        <div class="col-md-4">
+                                                                                            <label class="small mb-1">First name</label>
+                                                                                            <h5>First</h5>
+                                                                                            <!-- <input class="form-control" id="inputFirstName" type="text" placeholder="" value="" /> -->
+                                                                                        </div>
+                                                                                        <div class="col-md-4">
+                                                                                            <label class="small mb-1">Middle name</label>
+                                                                                            <h5>Middle</h5>
+                                                                                        </div>
+                                                                                        <!-- Form Group (last name)-->
+                                                                                        <div class="col-md-4">
+                                                                                            <label class="small mb-1">Last name</label>
+                                                                                            <h5>Last</h5>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- Form Group (email address)-->
+                                                                                    <div class="row gx-3 mb-3">
+                                                                                        <div class="col-md-6">
+                                                                                            <label class="small mb-1">Email address</label>
+                                                                                            <h5>emailaddress@email.com</h5>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <label class="small mb-1">Phone number</label>
+                                                                                            <h5>+63912345678</h5>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row gx-3 mb-3">
+                                                                                        <!-- <div class="col-md-4">
+                                                                                            <label class="small mb-1" for="inputBirthday">Birthday</label>
+                                                                                            <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988" />
+                                                                                        </div> -->
+                                                                                        <div class="col-md-6">
+                                                                                            <label class="small mb-1">Date of Birth</label>
+                                                                                            <h5>September 25, 1984</h5>
+                                                                                        </div>
+                                                                                        <div class="col-md-6 sbp-preview-content">
+                                                                                            <label class="small mb-1">Gender</label>
+                                                                                            <h5>Female</h5>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- Form Row-->
+                                                                                    <div class="row gx-3 mb-3">
+                                                                                        <div class="col-md-12">
+                                                                                            <label class="small mb-1" for="inputOrgName">Address</label>
+                                                                                            <p>Gov. Lim Bouelvard Caldwell Adventist Academy</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
                                                                             </div>
-                                                                            <!-- Form Group (email address)-->
-                                                                            <div class="row gx-3 mb-3">
-                                                                                <div class="col-md-6">
-                                                                                    <label class="small mb-1">Email address</label>
-                                                                                    <h5>emailaddress@email.com</h5>
-                                                                                </div>
-                                                                                <div class="col-md-6">
-                                                                                    <label class="small mb-1">Phone number</label>
-                                                                                    <h5>+63912345678</h5>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row gx-3 mb-3">
-                                                                                <!-- <div class="col-md-4">
-                                                                                    <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                                                                    <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988" />
-                                                                                </div> -->
-                                                                                <div class="col-md-6">
-                                                                                    <label class="small mb-1">Date of Birth</label>
-                                                                                    <h5>September 25, 1984</h5>
-                                                                                </div>
-                                                                                <div class="col-md-6 sbp-preview-content">
-                                                                                    <label class="small mb-1">Gender</label>
-                                                                                    <h5>Female</h5>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- Form Row-->
-                                                                            <div class="row gx-3 mb-3">
-                                                                                <div class="col-md-12">
-                                                                                    <label class="small mb-1" for="inputOrgName">Address</label>
-                                                                                    <p>Gov. Lim Bouelvard Caldwell Adventist Academy</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="modal-footer"><button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button></div>
                                                     </div>
                                                 </div>
-                                                <div class="modal-footer"><button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button></div>
                                             </div>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                            Landrei R. Zerna
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-red-soft text-red">Unpaid</span></td>
+                                                    <td><span class="badge bg-red-soft text-red">No</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                            Jhunel Amantiad
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
+                                                    <td><span class="badge bg-red-soft text-red">No</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-5.png" /></div>
+                                                            Emie Amantiad
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-green-soft text-green">Fully Paid</span></td>
+                                                    <td><span class="badge bg-red-soft text-red">No</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
+                                                            Jefer Matoguina
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-green-soft text-green">Fully Paid</span></td>
+                                                    <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-4.png" /></div>
+                                                            Juriz Matoguina
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-green-soft text-green">Fully Paid</span></td>
+                                                    <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-6.png" /></div>
+                                                            Hope Geron
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-red-soft text-red">Unpaid</span></td>
+                                                    <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                            Ian Keny Arcangel
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
+                                                    <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                            Marcelo Cedron
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-red-soft text-red">Unpaid</span></td>
+                                                    <td><span class="badge bg-danger-soft text-danger">No</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
+                                                            Geneveb Archangel
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
+                                                    <td><span class="badge bg-red-soft text-red">No</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                            Kaye Mary Guigayoma
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-green-soft text-green">Paid</span></td>
+                                                    <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                            Shirwin Quico
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
+                                                    <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                            Kaye Mary Guigayoma
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
+                                                    <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar col-xl-3 container-fluid">
+                            <div class="card card-waves mb-4">
+                                <div style="background-color: white" class="d-flex justify-content-between text-muted card-header border-bottom-1 text-white">
+                                    <div class="d-flex">
+                                        <div class="nav-link-icon">
+                                            <i style="height: 100%;" data-feather="activity"></i>
+                                            Cashier Activity
                                         </div>
                                     </div>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
-                                                    Landrei R. Zerna
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-red-soft text-red">Unpaid</span></td>
-                                            <td><span class="badge bg-red-soft text-red">No</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Jhunel Amantiad
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
-                                            <td><span class="badge bg-red-soft text-red">No</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-5.png" /></div>
-                                                    Emie Amantiad
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-green-soft text-green">Fully Paid</span></td>
-                                            <td><span class="badge bg-red-soft text-red">No</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
-                                                    Jefer Matoguina
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-green-soft text-green">Fully Paid</span></td>
-                                            <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-4.png" /></div>
-                                                    Juriz Matoguina
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-green-soft text-green">Fully Paid</span></td>
-                                            <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-6.png" /></div>
-                                                    Hope Geron
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-red-soft text-red">Unpaid</span></td>
-                                            <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
-                                                    Ian Keny Arcangel
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
-                                            <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Marcelo Cedron
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-red-soft text-red">Unpaid</span></td>
-                                            <td><span class="badge bg-danger-soft text-danger">No</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
-                                                    Geneveb Archangel
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
-                                            <td><span class="badge bg-red-soft text-red">No</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Kaye Mary Guigayoma
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-green-soft text-green">Paid</span></td>
-                                            <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Shirwin Quico
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
-                                            <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
-                                                    Kaye Mary Guigayoma
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-blue-soft text-blue">With Balance</span></td>
-                                            <td><span class="badge bg-green-soft text-green">Yes</span></td>                                            
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-account-update.html"><i data-feather="edit"></i></a>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <a href="#" class="text-md text-muted text-decoration-none">View History</a>
+                                </div>
+
+                                <div class="card-body bg-white timeline timeline-xs">
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-marker">
+                                            <div class="timeline-item-marker-text">10m ago</div>
+                                            <div class="timeline-item-marker-indicator"></div>
+                                        </div>
+                                        <div class="timeline-item-content"><span class="fw-bold">Sir Cedron</span> issued changes on student account: <span class="text-primary">Landrei Zerna</span></div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-marker">
+                                            <div class="timeline-item-marker-text">10m ago</div>
+                                            <div class="timeline-item-marker-indicator"></div>
+                                        </div>
+                                        <div class="timeline-item-content"><span class="fw-bold">Maam Vebz</span> issued changes on student account: <span class="text-primary">John Louis Candoleta</span></div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-marker">
+                                            <div class="timeline-item-marker-text">10m ago</div>
+                                            <div class="timeline-item-marker-indicator"></div>
+                                        </div>
+                                        <div class="timeline-item-content"><span class="fw-bold">Sir Cedron</span> issued changes on student account: <span class="text-primary">Landrei Zerna</span></div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0"></div>
+                            </div>
+                            <div class="card card-waves mb-4 mt-4">
+                                <div style="background-color: white" class="d-flex justify-content-between text-muted card-header border-bottom-1 text-white">
+                                    <div class="d-flex">
+                                        <div class="nav-link-icon">
+                                            <i style="height: 100%;" data-feather="dollar-sign"></i>
+                                            Recent Payment
+                                        </div>
+                                    </div>
+                                    <a href="#" class="text-md text-muted text-decoration-none">View History</a>
+                                </div>
+                                <div class="card-body timeline timeline-sm bg-white ">
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-marker">
+                                            <div class="timeline-item-marker-text">10m ago</div>
+                                            <div class="timeline-item-marker-indicator"><i data-feather="check"></i></div>
+                                        </div>
+                                        <div class="timeline-item-content"><span class="fw-bold">Landrei Zerna</span> payed an amount of <span class="text-success">₱5,000.00</span> thru <span class="text-primary">GCash</span> payment option.</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-marker">
+                                            <div class="timeline-item-marker-text">1hr ago</div>
+                                            <div class="timeline-item-marker-indicator"><i data-feather="check"></i></div>
+                                        </div>
+                                        <div class="timeline-item-content"><span class="fw-bold">Alfajr Gumbahali</span> payed an amount of <span class="text-success">₱10,000.00</span> thru <span class="text-red">Mastercard</span> payment option.</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-marker">
+                                            <div class="timeline-item-marker-text">1d ago</div>
+                                            <div class="timeline-item-marker-indicator"><i data-feather="check"></i></div>
+                                        </div>
+                                        <div class="timeline-item-content"><span class="fw-bold">Adznairah Sali</span> payed an amount of <span class="text-success">₱4,000.00</span> thru <span class="text-yellow">Cash</span> payment option.</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-marker">
+                                            <div class="timeline-item-marker-text">1d ago</div>
+                                            <div class="timeline-item-marker-indicator"><i data-feather="check"></i></div>
+                                        </div>
+                                        <div class="timeline-item-content"><span class="fw-bold">Alfajr Gumbahali</span> payed an amount of <span class="text-success">₱5,000.00</span> thru <span class="text-primary">GCash</span> payment option.</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-marker">
+                                            <div class="timeline-item-marker-text">5d ago</div>
+                                            <div class="timeline-item-marker-indicator"><i data-feather="check"></i></div>
+                                        </div>
+                                        <div class="timeline-item-content"><span class="fw-bold">John Louis Candoleta</span> payed an amount of <span class="text-success">₱10,000.00</span> thru <span class="text-yellow">Cash</span> payment option.</div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0"></div>
                             </div>
                         </div>
                     </div>
