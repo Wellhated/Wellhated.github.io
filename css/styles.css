@@ -21145,5 +21145,6 @@ pre[class*=language-] {
 }
 
 .ul-blog-img {
+  border: none;
   border-radius: 0.6rem;
 }
