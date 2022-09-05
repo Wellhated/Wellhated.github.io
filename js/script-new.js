@@ -1,8 +1,8 @@
 $(document).ready(() => {
-    if(window.matchMedia("(max-width: 767px)").matches){
-        $("modal.card").css("overflow", "scroll");
-        $(".card-header").css("width", "68rem");
-    }
+    // if(window.matchMedia("(max-width: 767px)").matches){
+    //     $("modal.card").css("overflow", "scroll");
+    //     $(".card-header").css("width", "68rem");
+    // }
 
     // view-classes.html only
     $(".classes .dataTable-wrapper .dataTable-top").html("");
