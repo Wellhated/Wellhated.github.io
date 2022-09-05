@@ -21131,19 +21131,19 @@ pre[class*=language-] {
   }
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 94%;
+@media only screen and (min-width: 420) {
+  .sidebar > .card {
+    flex: 0 0 auto;
+    width: 100%;
     /* width: 44.6rem; */
   }
 }
-@media (max-width: 1500px) {
-  .sidebar {
-    flex: 0 0 auto;
-    width: 96%;
-  }
-}
+
 
 .timeline-item-adjust {
   transform: translateX(-1.625rem);
+}
+
+.ul-blog-img {
+  border-radius: 0.6rem;
 }
