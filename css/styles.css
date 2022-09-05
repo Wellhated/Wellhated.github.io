@@ -21131,11 +21131,16 @@ pre[class*=language-] {
   }
 }
 
-
-@media (min-width: 1500px) {
+@media (max-width: 768px) {
+  .sidebar {
+    width: 94%;
+    /* width: 44.6rem; */
+  }
+}
+@media (max-width: 1500px) {
   .sidebar {
     flex: 0 0 auto;
-    width: 25%;
+    width: 96%;
   }
 }
 
