@@ -21131,14 +21131,91 @@ pre[class*=language-] {
   }
 }
 
-@media only screen and (min-width: 420) {
+/* @media only screen and (min-width: 420px) {
+  .main-page-content {
+    width: 75%;
+  }
+  .sidebar-container {
+    width: 25%;
+  }
   .sidebar > .card {
     flex: 0 0 auto;
     width: 100%;
-    /* width: 44.6rem; */
+  }
+} */
+
+@media only screen and (min-width: 320px) {
+  .main-page-content {
+    width: 100%
+  }
+  .sidebar-container {
+    width: 93%
+  }
+  .sidebar-container > .card {
+    margin-left: auto;
+    width: 100%;
   }
 }
-
+@media only screen and (min-width: 375px) {
+  .main-page-content {
+    width: 100%
+  }
+  .sidebar-container {
+    width: 93%
+  }
+  .sidebar-container > .card {
+    margin-left: auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .main-page-content {
+    width: 100%
+  }
+  .sidebar-container {
+    width: 93%
+  }
+  .sidebar-container > .card {
+    margin-left: auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-page-content {
+    width: 55%;
+  }
+  .sidebar-container {
+    width: 45%;
+  }
+  .sidebar-container > .card {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-page-content {
+    width: 65%;
+  }
+  .sidebar-container {
+    width: 35%;
+  }
+  .sidebar-container > .card {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .main-page-content {
+    width: 75%;
+  }
+  .sidebar-container {
+    width: 25%;
+  }
+  .sidebar-container > .card {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
 
 .timeline-item-adjust {
   transform: translateX(-1.625rem);

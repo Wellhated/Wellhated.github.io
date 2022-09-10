@@ -64,25 +64,25 @@
     .front-page-header {
         height: 21.5rem;
         width: 100%;
-        background-position: left;
+        background-position: center;
     }
     .hoverlay {
-        background-position: left;
+        background-position: center;
         background-size: cover;
-        background-image: url('../header-banner.svg');
+        background-image: url('../full-logo.svg');
     }
 }
 @media only screen and (min-width: 900px) {
     .front-page-header {
         height: 21.5rem;
         width: 100%;
-        background-position: left;
+        background-position: center;
     }
     .hoverlay {
         /* background-size: 250px 250px; */
         background-size: cover;
         background-color: white;
-        background-image: url('../header-banner.svg');
+        background-image: url('../full-logo.svg');
     }
 }
 @media only screen and (min-width: 1440px) {
