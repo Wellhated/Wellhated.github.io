@@ -25,6 +25,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
         s[1] = s[1] || "";
         s[1] += new Array(prec - s[1].length + 1).join("0");
     }
+    console.log(s.join(dec));
     return s.join(dec);
 }
 
@@ -34,18 +35,17 @@ var myLineChart = new Chart(ctx, {
     type: "line",
     data: {
         labels: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
         ],
         datasets: [{
             label: "Earnings",
@@ -61,18 +61,17 @@ var myLineChart = new Chart(ctx, {
             pointHitRadius: 10,
             pointBorderWidth: 2,
             data: [
-                0,
-                10000,
-                5000,
-                15000,
-                10000,
-                20000,
-                15000,
-                25000,
-                20000,
-                30000,
-                25000,
-                40000
+                100,
+                150,
+                180,
+                170,
+                300,
+                312,
+                350,
+                360,
+                300,
+                412,
+                530
             ]
         }]
     },
@@ -105,7 +104,7 @@ var myLineChart = new Chart(ctx, {
                     padding: 10,
                     // Include a dollar sign in the ticks
                     callback: function(value, index, values) {
-                        return "$" + number_format(value);
+                        return "" + number_format(value);
                     }
                 },
                 gridLines: {

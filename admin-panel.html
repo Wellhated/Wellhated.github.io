@@ -57,33 +57,6 @@
                     </a>
                 </div>
             </li>
-            <!-- Alerts Dropdown-->
-            <li class="nav-item dropdown no-caret d-none d-sm-block me-3 dropdown-notifications">
-                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownAlerts" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="bell"></i></a>
-                <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
-                    <h6 class="dropdown-header dropdown-notifications-header">
-                        <i class="me-2" data-feather="bell"></i>
-                        News & Announcements
-                    </h6>
-                    <!-- Example Alert 1-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <div class="dropdown-notifications-item-icon bg-warning"><i data-feather="activity"></i></div>
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-details">December 29, 2021</div>
-                            <div class="dropdown-notifications-item-content-text">This is an alert message. It's nothing serious, but it requires your attention.</div>
-                        </div>
-                    </a>
-                    <!-- Example Alert 2-->
-                    <a class="dropdown-item dropdown-notifications-item" href="#!">
-                        <div class="dropdown-notifications-item-icon bg-info"><i data-feather="bar-chart"></i></div>
-                        <div class="dropdown-notifications-item-content">
-                            <div class="dropdown-notifications-item-content-details">December 22, 2021</div>
-                            <div class="dropdown-notifications-item-content-text">A new monthly report is ready. Click here to view!</div>
-                        </div>
-                    </a>
-                    <a class="dropdown-item dropdown-notifications-footer" href="#!">View All Alerts</a>
-                </div>
-            </li>
 
             <!-- User Dropdown-->
             <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
@@ -114,23 +87,6 @@
             <nav class="sidenav shadow-right sidenav-light">
                 <div class="sidenav-menu">
                     <div class="nav accordion" id="accordionSidenav">
-                        <!-- Sidenav Menu Heading (Account)-->
-                        <!-- * * Note: * * Visible only on and above the sm breakpoint-->
-                        <div class="sidenav-menu-heading d-sm-none">Account</div>
-                        <!-- Sidenav Link (Alerts)-->
-                        <!-- * * Note: * * Visible only on and above the sm breakpoint-->
-                        <a class="nav-link d-sm-none" href="#!">
-                            <div class="nav-link-icon"><i data-feather="bell"></i></div>
-                            Alerts
-                            <span class="badge bg-warning-soft text-warning ms-auto">4 New!</span>
-                        </a>
-                        <!-- Sidenav Link (Messages)-->
-                        <!-- * * Note: * * Visible only on and above the sm breakpoint-->
-                        <a class="nav-link d-sm-none" href="#!">
-                            <div class="nav-link-icon"><i data-feather="mail"></i></div>
-                            Messages
-                            <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
-                        </a>
                         <!-- Sidenav Menu Heading (Core)-->
                         <div class="sidenav-menu-heading">main page</div>
                         <!-- Sidenav Accordion (Dashboard)-->
@@ -152,7 +108,7 @@
                         </div>
 
                         <div class="sidenav-menu-heading">Organizations</div>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="./organization-page.html">
                             <div class="nav-link-icon"><i data-feather="user"></i></div>
                             School Groups
                         </a>
@@ -224,70 +180,601 @@
         </div>
         <div id="layoutSidenav_content">
             <main>
-                <!-- Main page content-->
-                <div class="container-xl px-4">
-                    <!-- Custom page header alternative example-->
-                    <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
- 
-                        <div class="card front-page-header container-fluid mb-4 mt-5 hoverlay lift" >
-                            <a href="#">
-                                <div class="card-body p-5">
-                                    <!-- style="height: 17rem; width: 100rem;" -->
-                                    <div class="row align-items-center justify-content-between">
+                <header class="page-header pb-10">
+                    <div class="container-xl px-4">
+                        <div class="page-header-content pt-4">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto mt-4">
+                                    <h1 class="text-primary page-header-title">
+                                        <div class="page-header-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                                        Dashboard
+                                    </h1>
+                                    <div class="page-header-subtitle">Caldwell Adventist Academy's Teacher, Faculty, and Staff dashboard.</div>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary">
+                                        Export Report as PDF
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="container-xl mt-n15">
+                    <div class="row">
+                        <div class="col-xxl-12 d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
+                            <div class="front-page-header container-fluid mb-4 mt-5 hoverlay" >
+                                <a href="#">
+                                    <div class="card-body p-5">
+                                        <!-- style="height: 17rem; width: 100rem;" -->
+                                        <div class="row align-items-center justify-content-between">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <!-- Dashboard info widget 1-->
+                            <div class="card border-start-lg border-start-primary h-100">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <div class="small fw-bold text-primary mb-1">Total Enrollees</div>
+                                            <div class="h5">530</div>
+                                            <div class="text-xs fw-bold text-success d-inline-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up me-1"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                                20%
+                                            </div>
+                                        </div>
+                                        <div class="ms-2"><svg class="svg-inline--fa fa-dollar-sign fa-2x text-gray-200" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dollar-sign" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M160 0C177.7 0 192 14.33 192 32V67.68C193.6 67.89 195.1 68.12 196.7 68.35C207.3 69.93 238.9 75.02 251.9 78.31C268.1 82.65 279.4 100.1 275 117.2C270.7 134.3 253.3 144.7 236.1 140.4C226.8 137.1 198.5 133.3 187.3 131.7C155.2 126.9 127.7 129.3 108.8 136.5C90.52 143.5 82.93 153.4 80.92 164.5C78.98 175.2 80.45 181.3 82.21 185.1C84.1 189.1 87.79 193.6 95.14 198.5C111.4 209.2 136.2 216.4 168.4 225.1L171.2 225.9C199.6 233.6 234.4 243.1 260.2 260.2C274.3 269.6 287.6 282.3 295.8 299.9C304.1 317.7 305.9 337.7 302.1 358.1C295.1 397 268.1 422.4 236.4 435.6C222.8 441.2 207.8 444.8 192 446.6V480C192 497.7 177.7 512 160 512C142.3 512 128 497.7 128 480V445.1C127.6 445.1 127.1 444.1 126.7 444.9L126.5 444.9C102.2 441.1 62.07 430.6 35 418.6C18.85 411.4 11.58 392.5 18.76 376.3C25.94 360.2 44.85 352.9 60.1 360.1C81.9 369.4 116.3 378.5 136.2 381.6C168.2 386.4 194.5 383.6 212.3 376.4C229.2 369.5 236.9 359.5 239.1 347.5C241 336.8 239.6 330.7 237.8 326.9C235.9 322.9 232.2 318.4 224.9 313.5C208.6 302.8 183.8 295.6 151.6 286.9L148.8 286.1C120.4 278.4 85.58 268.9 59.76 251.8C45.65 242.4 32.43 229.7 24.22 212.1C15.89 194.3 14.08 174.3 17.95 153C25.03 114.1 53.05 89.29 85.96 76.73C98.98 71.76 113.1 68.49 128 66.73V32C128 14.33 142.3 0 160 0V0z"></path></svg><!-- <i class="fas fa-dollar-sign fa-2x text-gray-200"></i> Font Awesome fontawesome.com --></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <!-- Dashboard info widget 2-->
+                            <div class="card border-start-lg border-start-primary h-100">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <div class="small fw-bold text-primary mb-1">Old Students</div>
+                                            <div class="h5">220</div>
+                                            <div class="text-xs fw-bold text-danger d-inline-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-down me-1"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                                                5%
+                                            </div>
+                                        </div>
+                                        <div class="ms-2"><svg class="svg-inline--fa fa-tag fa-2x text-gray-200" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z"></path></svg><!-- <i class="fas fa-tag fa-2x text-gray-200"></i> Font Awesome fontawesome.com --></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <!-- Dashboard info widget 3-->
+                            <div class="card border-start-lg border-start-primary h-100">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <div class="small fw-bold text-primary mb-1">New Students</div>
+                                            <div class="h5">310</div>
+                                            <div class="text-xs fw-bold text-success d-inline-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up me-1"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                                12%
+                                            </div>
+                                        </div>
+                                        <div class="ms-2"><svg class="svg-inline--fa fa-arrow-pointer fa-2x text-gray-200" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-pointer" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M318.4 304.5c-3.531 9.344-12.47 15.52-22.45 15.52h-105l45.15 94.82c9.496 19.94 1.031 43.8-18.91 53.31c-19.95 9.504-43.82 1.035-53.32-18.91L117.3 351.3l-75 88.25c-4.641 5.469-11.37 8.453-18.28 8.453c-2.781 0-5.578-.4844-8.281-1.469C6.281 443.1 0 434.1 0 423.1V56.02c0-9.438 5.531-18.03 14.12-21.91C22.75 30.26 32.83 31.77 39.87 37.99l271.1 240C319.4 284.6 321.1 295.1 318.4 304.5z"></path></svg><!-- <i class="fas fa-mouse-pointer fa-2x text-gray-200"></i> Font Awesome fontawesome.com --></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <!-- Dashboard info widget 4-->
+                            <div class="card border-start-lg border-start-primary h-100">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <div class="small fw-bold text-primary mb-1">ESC Scholars</div>
+                                            <div class="h5">100</div>
+                                            <div class="text-xs fw-bold text-danger d-inline-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-down me-1"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div class="ms-2"><svg class="svg-inline--fa fa-percent fa-2x text-gray-200" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="percent" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M374.6 73.39c-12.5-12.5-32.75-12.5-45.25 0l-320 320c-12.5 12.5-12.5 32.75 0 45.25C15.63 444.9 23.81 448 32 448s16.38-3.125 22.62-9.375l320-320C387.1 106.1 387.1 85.89 374.6 73.39zM64 192c35.3 0 64-28.72 64-64S99.3 64.01 64 64.01S0 92.73 0 128S28.7 192 64 192zM320 320c-35.3 0-64 28.72-64 64s28.7 64 64 64s64-28.72 64-64S355.3 320 320 320z"></path></svg><!-- <i class="fas fa-percentage fa-2x text-gray-200"></i> Font Awesome fontawesome.com --></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <!-- Progress card example-->
+                            <div class="card bg-primary border-0 mb-3">
+                                <div class="card-body">
+                                    <h5 class="text-white-50">School Budget Overview</h5>
+                                    <div class="mb-4">
+                                        <span class="display-4 text-white">$10k</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-green border-0">
+                                <div class="card-body">
+                                    <h5 class="text-white-50">Ministerial Budget Overview</h5>
+                                    <div class="mb-4">
+                                        <span class="display-4 text-white">$1k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mb-4">
+                            <!-- Area chart example-->
+                            <div class="card mb-4">
+                                <div class="card-header">Student Population Summary</div>
+                                <div class="card-body">
+                                    <div class="chart-area"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="myAreaChart" width="875" height="240" style="display: block; width: 875px; height: 240px;" class="chartjs-render-monitor"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="./student-enrolled-subjects.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text feather-xl text-primary mb-3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                            <h5>My Classroom</h5>
+                                            <div class="text-muted small">View the list of your enrolled subjects.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="./student-enrolled-subjects.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive feather-xl text-primary mb-3"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                                            <h5>Teacher's Resources</h5>
+                                            <div class="text-muted small">View the list of your enrolled subjects.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="./student-cashier-account.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign feather-xl text-primary mb-3"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                            <h5>E-Class Record</h5>
+                                            <div class="text-muted small">To keep track of your account and other necessary balance</div>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-xl-4 mb-4">
-                            <!-- Dashboard example card 1-->
-                            <a class="card lift h-100" href="./admin-view-loads.html">
+                            <a class="card lift h-100" href="#">
                                 <div class="card-body d-flex justify-content-center flex-column">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="me-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open feather-xl text-primary mb-3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package feather-xl text-primary mb-3"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> -->
-                                            <h5>My Classroom</h5>
-                                            <div class="text-muted small">View the list of your classes, e-class, and students.</div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users feather-xl text-primary mb-3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                            <h5>Clubs & Organizations</h5>
+                                            <div class="text-muted small">View informations about your clubs & organizations.</div>
                                         </div>
-                                        <img src="assets/img/illustrations/browser-stats.svg" alt="..." style="width: 8rem">
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col-xl-4 mb-4">
-                            <!-- Dashboard example card 2-->
-                            <a class="card lift h-100" href="./admin-shared-resources.html">
+                            <a class="card lift h-100" href="#">
                                 <div class="card-body d-flex justify-content-center flex-column">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="me-3">
-                                            <!-- <i data-feather="archive"></i> -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive feather-xl text-secondary mb-3"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
-                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book feather-xl text-secondary mb-3"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> -->
-                                            <h5>Teacher's Resources</h5>
-                                            <div class="text-muted small">To keep track of teacher's records and other necessary documents</div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square feather-xl text-primary mb-3"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                            <h5>Tambayan Corner</h5>
+                                            <div class="text-muted small">Chat with your fellow students/schoolmates!</div>
                                         </div>
-                                        <img src="assets/img/illustrations/processing.svg" alt="..." style="width: 8rem">
                                     </div>
                                 </div>
                             </a>
                         </div>
+
                         <div class="col-xl-4 mb-4">
-                            <!-- Dashboard example card 3-->
-                            <a class="card lift h-100" href="./admin-view-loads.html">
+                            <a class="card lift h-100" href="#">
                                 <div class="card-body d-flex justify-content-center flex-column">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="me-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout feather-xl text-green mb-3"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                                            <h5>E-Class Records</h5>
-                                            <div class="text-muted small">To monitor your students performance and academic record</div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2 feather-xl text-primary mb-3"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                            <h5>School Forum</h5>
+                                            <div class="text-muted small">CAA's very own school forum! What's on your mind?</div>
                                         </div>
-                                        <img src="assets/img/illustrations/windows.svg" alt="..." style="width: 8rem">
                                     </div>
                                 </div>
                             </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    Faculty Members
+                                </div>
+                                <div class="card-body">
+                                    <table id="datatablesSimple">
+                                        <thead>
+                                            <tr>
+                                                <th>Fullname</th>
+                                                <th>Email</th>
+                                                <th>Role / Status</th>
+                                                <th>Classes</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>User</th>
+                                                <th>Email</th>
+                                                <th>Role / Status</th>
+                                                <th>Classes</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </tfoot>
+                                        <div class="modal fade" id="exampleModalXl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" style="display: none;" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Student Profile</h5>
+                                                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container-xl px-4 mt-4">
+                                                            <hr class="mt-0 mb-4" />
+                                                            <div class="row">
+                                                                <div class="col-xl-4">
+                                                                    <!-- Profile picture card-->
+                                                                    <div class="card mb-4 mb-xl-0">
+                                                                        <div class="card-header">Profile Picture</div>
+                                                                        <div class="card-body text-center">
+                                                                            <!-- Profile picture image-->
+                                                                            <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" />
+                                                                            <!-- Profile picture help block-->
+                                                                            <div class="small text-muted">
+                                                                                Tags
+                                                                            </div>
+                                                                            <div class="small text-muted mb-4">
+                                                                                <span class="badge bg-red-soft text-red">Principal</span>
+                                                                            </div>                                                                        
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-1 col-xl-8">
+                                                                    <!-- Account details card-->
+                                                                    <div class="card mb-4">
+                                                                        <div class="card-header">Account Details</div>
+                                                                        <div class="card-body">
+                                                                            <form>
+                                                                                <!-- Form Row-->
+                                                                                <div class="row gx-3 mb-3">
+                                                                                    <!-- Form Group (first name)-->
+                                                                                    <div class="col-md-4">
+                                                                                        <label class="small mb-1">First name</label>
+                                                                                        <h5>First</h5>
+                                                                                        <!-- <input class="form-control" id="inputFirstName" type="text" placeholder="" value="" /> -->
+                                                                                    </div>
+                                                                                    <div class="col-md-4">
+                                                                                        <label class="small mb-1">Middle name</label>
+                                                                                        <h5>Middle</h5>
+                                                                                    </div>
+                                                                                    <!-- Form Group (last name)-->
+                                                                                    <div class="col-md-4">
+                                                                                        <label class="small mb-1">Last name</label>
+                                                                                        <h5>Last</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Form Group (email address)-->
+                                                                                <div class="row gx-3 mb-3">
+                                                                                    <div class="col-md-6">
+                                                                                        <label class="small mb-1">Email address</label>
+                                                                                        <h5>emailaddress@email.com</h5>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <label class="small mb-1">Phone number</label>
+                                                                                        <h5>+63912345678</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row gx-3 mb-3">
+                                                                                    <!-- <div class="col-md-4">
+                                                                                        <label class="small mb-1" for="inputBirthday">Birthday</label>
+                                                                                        <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988" />
+                                                                                    </div> -->
+                                                                                    <div class="col-md-6">
+                                                                                        <label class="small mb-1">Date of Birth</label>
+                                                                                        <h5>September 25, 1984</h5>
+                                                                                    </div>
+                                                                                    <div class="col-md-6 sbp-preview-content">
+                                                                                        <label class="small mb-1">Gender</label>
+                                                                                        <h5>Female</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Form Row-->
+                                                                                <div class="row gx-3 mb-3">
+                                                                                    <div class="col-md-12">
+                                                                                        <label class="small mb-1" for="inputOrgName">Address</label>
+                                                                                        <p>Gov. Lim Bouelvard Caldwell Adventist Academy</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer"><button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                        School Principal
+                                                    </div>
+                                                </td>
+                                                <td>schoolprincipal@email.com</td>
+                                                <td>
+                                                    <span class="badge bg-danger-soft text-red">Principal</span>
+                                                </td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                        Jhunel Amantiad
+                                                    </div>
+                                                </td>
+                                                <td>jhunelamantiad@email.com</td>
+                                                <td>
+                                                    <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                    <span class="badge bg-purple-soft text-purple">Media Team</span>
+                                                </td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-5.png" /></div>
+                                                        Emie Amantiad
+                                                    </div>
+                                                </td>
+                                                <td>emieamantiad@email.com</td>
+            
+                                                <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
+                                                        Jefer Matoguina
+                                                    </div>
+                                                </td>
+                                                <td>jefermatoguina@email.com</td>
+            
+                                                <td>
+                                                    <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                    <span class="badge bg-purple-soft text-purple">Media Team</span>
+                                                </td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-4.png" /></div>
+                                                        Juriz Matoguina
+                                                    </div>
+                                                </td>
+                                                <td>jurizmatoguina@email.com</td>
+            
+                                                <td>
+                                                    <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                </td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-6.png" /></div>
+                                                        Hope Geron
+                                                    </div>
+                                                </td>
+                                                <td>hopegeron@email.com</td>
+            
+                                                <td>
+                                                    <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                    <span class="badge bg-info-soft text-info">Academic Adviser</span>
+                                                </td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                        Ian Keny Arcangel
+                                                    </div>
+                                                </td>
+                                                <td>iankenyarchangel@email.com</td>
+            
+                                                <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                        Marcelo Cedron
+                                                    </div>
+                                                </td>
+                                                <td>marcelocedron@email.com</td>
+            
+                                                <td>
+                                                    <span class="badge bg-green-soft text-green">Cashier</span>
+                                                </td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-3.png" /></div>
+                                                        Geneveb Archangel
+                                                    </div>
+                                                </td>
+                                                <td>genevebarchangel@email.com</td>
+            
+                                                <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                        Kaye Mary Guigayoma
+                                                    </div>
+                                                </td>
+                                                <td>kayemaryguigayoma@email.com</td>
+            
+                                                <td><span class="badge bg-yellow-soft text-yellow">Subject Teacher</span></td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                        Shirwin Quico
+                                                    </div>
+                                                </td>
+                                                <td>shirwinquico@email.com</td>
+            
+                                                <td>
+                                                    <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                    <span class="badge bg-pink-soft text-pink">Guidance Officer</span>
+                                                </td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></div>
+                                                        Kaye Mary Guigayoma
+                                                    </div>
+                                                </td>
+                                                <td>kayemaryguigayoma@email.com</td>
+            
+                                                <td>
+                                                    <span class="badge bg-yellow-soft text-yellow">Subject Teacher</span>
+                                                    <span class="badge bg-primary-soft text-primary">Secretary</span>
+                                                </td>
+                                                <td><a style="text-decoration: none;" href="./admin-view-loads.html">View Loads</a></td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark me-2" href="admin-edit-faculty.html"><i data-feather="edit"></i></a>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#exampleModalXl" href="#!"><i data-feather="user"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-datatable btn-icon btn-transparent-dark" href="#!"><i data-feather="trash-2"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -295,6 +782,7 @@
         </div>
     </div>
 
+    
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
@@ -303,5 +791,8 @@
     <script src="./assets/demo/chart-pie-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
     <script src="./js/litepicker.js"></script>
+    <script src="./js/simple-datatables.js"></script>
+    <script src="./js/datatables/datatables-simple-demo.js"></script>
+
 </body>
 </html>

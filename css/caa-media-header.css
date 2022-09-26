@@ -1,3 +1,7 @@
+.front-page-header {
+    border-radius: 0.35rem;
+}
+
 @media only screen and (max-width: 375px) {
     .front-page-header {
         height: 18rem;
@@ -95,8 +99,8 @@
         /* background-size: 250px 250px; */
         background-size: cover;
         background-color: white;
-        background-image: url('../header-banner.svg');
-        background-position: left;
+        background-image: url('../full-caa-logo.svg');
+        background-position: center;
         background-size: cover;
     }
 }

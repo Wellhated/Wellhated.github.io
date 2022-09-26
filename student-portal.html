@@ -13,7 +13,7 @@
     <script data-search-pseudo-elements defer src="./js/all.min.js" ></script>
     <script src="./js/feather.min.js"></script>
 </head>
-<body class="nav-fixed sidenav-toggled">
+<body class="nav-fixed">
     <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start navbar-light bg-white" id="sidenavAccordion">
         <!-- Sidenav Toggle Button-->
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 me-2 ms-lg-2 me-lg-0" id="sidebarToggle"><i data-feather="menu"></i></button>
@@ -22,64 +22,6 @@
         <!-- * * * * * * When using an image, we recommend the SVG format.-->
         <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
         <a><img style="padding-right: 80px;" height="40px" width="10px" class="navbar-brand" src="./caa-1.svg" alt=""></a>
-
-        <!-- Navbar Items-->
-        <ul class="navbar-nav align-items-center ms-auto">
-            <li class="nav-item dropdown no-caret d-none d-md-block me-3">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="fw-500">Caldwell Adventist Academy</div>
-                    <!-- <i class="fas fa-chevron dropdown-arrow"></i> -->
-                    <i data-feather="arrow-right"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end py-0 me-sm-n15 me-lg-0 o-hidden animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
-                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro" target="_blank">
-                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="users"></i></div>
-                        <div>
-                            <div class="small text-gray-500">School Forum</div>
-                            Open forum for students
-                        </div>
-                    </a>
-                    <div class="dropdown-divider m-0"></div>
-                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/components" target="_blank">
-                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="activity"></i></div>
-                        <div>
-                            <div class="small text-gray-500">News & Events</div>
-                            Stay updated with CAA!
-                        </div>
-                    </a>
-                    <div class="dropdown-divider m-0"></div>
-                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/changelog" target="_blank">
-                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="play"></i></div>
-                        <div>
-                            <div class="small text-gray-500">School Blog</div>
-                            Inspiring CAA Blogs!
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <!-- User Dropdown-->
-            <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
-                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src="assets/img/illustrations/profiles/profile-2.png" /></a>
-                <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
-                    <h6 class="dropdown-header d-flex align-items-center">
-                        <img class="dropdown-user-img" src="assets/img/illustrations/profiles/profile-2.png" />
-                        <div class="dropdown-user-details">
-                            <div class="dropdown-user-details-name">Landrei R. Zerna</div>
-                            <div class="dropdown-user-details-email">zernalandrei@email.com</div>
-                        </div>
-                    </h6>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#!">
-                        <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
-                        Account
-                    </a>
-                    <a class="dropdown-item" href="#!">
-                        <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
-                        Logout
-                    </a>
-                </div>
-            </li>
-        </ul>
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -106,6 +48,12 @@
                         <div class="mobile-container container" style="margin-top: 15px; display: none;">
                             <hr style="display: none" class="nav-hr mt-0 mb-4" />
                         </div>
+                        <div class="mobile-header-set sidenav-menu-heading">Dashboard</div>
+                        <!-- Sidenav Accordion (Dashboard)-->
+                        <a class="active nav-link" href="./student-portal.html">
+                            <div class="nav-link-icon"><i data-feather="user"></i></div>
+                            Student's Home
+                        </a>
                         <!-- Sidenav Menu Heading (Core)-->
                         <div class="mobile-header-set sidenav-menu-heading">My Account</div>
                         <!-- Sidenav Accordion (Dashboard)-->
@@ -131,199 +79,154 @@
         </div>
         <div id="layoutSidenav_content">
             <main>
-                <div class="row container-fluid">
-                    <div class="main-page-content col-xl-9 container-fluid px-4">
-                        <!-- Custom page header alternative example-->
-                        <div class="row">
-                            <div class="col-xxl-12 d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
-    
-                                <div class="card front-page-header container-fluid mb-4 mt-5 hoverlay lift" >
-                                    <a href="#">
-                                        <div class="card-body p-5">
-                                            <!-- style="height: 17rem; width: 100rem;" -->
-                                            <div class="row align-items-center justify-content-between">
-                                            </div>
-                                        </div>
-                                    </a>
+                <header class="page-header pb-10">
+                    <div class="container-xl px-4">
+                        <div class="page-header-content pt-4">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto mt-4">
+                                    <h1 class="text-primary page-header-title">
+                                        <div class="page-header-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                                        Hi, Landrei Zerna!
+                                    </h1>
+                                    <div class="page-header-subtitle">Welcome to Caldwell Adventist Academy's School Portal!</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-4 mb-4">
-                                <a class="card lift h-100" href="./student-enrolled-subjects.html">
-                                    <div class="card-body d-flex justify-content-center flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="me-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text feather-xl text-primary mb-3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                                                <h5>Worksheets</h5>
-                                                <div class="text-muted small">View the list of your enrolled subjects.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-4 mb-4">
-                                <a class="card lift h-100" href="./student-enrolled-subjects.html">
-                                    <div class="card-body d-flex justify-content-center flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="me-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive feather-xl text-primary mb-3"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
-                                                <h5>Classroom</h5>
-                                                <div class="text-muted small">View the list of your enrolled subjects.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-xl-4 mb-4">
-                                <a class="card lift h-100" href="./student-cashier-account.html">
-                                    <div class="card-body d-flex justify-content-center flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="me-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign feather-xl text-primary mb-3"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                                                <h5>School Balance</h5>
-                                                <div class="text-muted small">To keep track of your account and other necessary balance</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-4 mb-4">
-                                <a class="card lift h-100" href="./student-enrolled-subjects.html">
-                                    <div class="card-body d-flex justify-content-center flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="me-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users feather-xl text-primary mb-3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                                <h5>Clubs & Organizations</h5>
-                                                <div class="text-muted small">View informations about your clubs & organizations.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-4 mb-4">
-                                <a class="card lift h-100" href="./student-enrolled-subjects.html">
-                                    <div class="card-body d-flex justify-content-center flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="me-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square feather-xl text-primary mb-3"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                                                <h5>Tambayan Corner</h5>
-                                                <div class="text-muted small">Chat with your fellow students/schoolmates!</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-xl-4 mb-4">
-                                <a class="card lift h-100" href="./student-cashier-account.html">
-                                    <div class="card-body d-flex justify-content-center flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="me-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2 feather-xl text-primary mb-3"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                                                <h5>School Forum</h5>
-                                                <div class="text-muted small">CAA's very own school forum! What's on your mind?</div>
-                                            </div>
+                    </div>
+                </header>
+                <div class="container-xl mt-n15">
+                    <div class="row">
+                        <div class="col-xxl-12 d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
+                            <div class="card front-page-header container-fluid mb-4 mt-5 hoverlay" >
+                                <a href="#">
+                                    <div class="card-body p-5">
+                                        <!-- style="height: 17rem; width: 100rem;" -->
+                                        <div class="row align-items-center justify-content-between">
                                         </div>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="sidebar sidebar-container col-xl-3 container-fluid mt-5">
-                        <div class="card lift card-waves mb-4">
-                            <div style="background-color: white" class="d-flex justify-content-between text-muted card-header border-bottom-1 text-white">
-                                <div class="d-flex">
-                                    <div class="nav-link-icon">
-                                        <i style="height: 100%;" data-feather="activity"></i>
-                                        School Updates
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="card bg-primary text-white h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-3">
+                                            <div class="text-white-75 small">Account Balance</div>
+                                            <div class="text-lg fw-bold">₱16,155.00</div>
+                                        </div>
+                                        <i class="feather-xl text-white-50" data-feather="dollar-sign"></i>
                                     </div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between small">
+                                    <a class="text-white stretched-link" href="./student-cashier-account.html">View Report</a>
+                                    <div class="text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
-
-                            <div class="card-body bg-white timeline timeline-xs">
-                                <div class="timeline-item">
-                                    <div class="timeline-item-marker">
-                                        <div class="timeline-item-marker-indicator"></div>
-                                    </div>
-                                    <div class="timeline-item-content"><span class="fw-bold">
-                                        <a class="text-decoration-none" href="#">
-                                            Upcoming event: CAA Palaro 2022!
-                                            <br><span class="text-muted">09/26/2022</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-item-marker">
-                                        <!-- <div class="timeline-item-marker-text">10m ago</div> -->
-                                        <div class="timeline-item-marker-indicator"></div>
-                                    </div>
-                                    <div class="timeline-item-content"><span class="fw-bold">
-                                        <a class="text-decoration-none" href="#">
-                                            No classes this week 
-                                            <br><span class="text-muted">09/25/2022</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-item-marker">
-                                        <!-- <div class="timeline-item-marker-text">10m ago</div> -->
-                                        <div class="timeline-item-marker-indicator"></div>
-                                    </div>
-                                    <div class="timeline-item-content"><span class="fw-bold">
-                                        <a class="text-decoration-none" href="#">
-                                            Upcoming event: Sci-Math!
-                                            <br><span class="text-muted">09/15/2022</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-white border-0"></div>
                         </div>
-                        <div class="card lift card-waves mb-4 mt-4">
-                            <div style="background-color: white" class="d-flex justify-content-between text-muted card-header border-bottom-1 text-white">
-                                <div class="d-flex">
-                                    <div class="nav-link-icon">
-                                        <i style="height: 100%;" data-feather="users"></i>
-                                        School Blogs
+                        <div class="col-lg-6 mb-4">
+                            <div class="card bg-green text-white h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-3">
+                                            <div class="text-white-75 small">Student Status</div>
+                                            <div class="text-lg fw-bold">Updated</div>
+                                        </div>
+                                        <i class="feather-xl text-white-50" data-feather="activity"></i>
                                     </div>
                                 </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between small">
+                                    <a class="text-white stretched-link" href="./student-profile.html">View Account</a>
+                                    <div class="text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
                             </div>
-                            <div class="card-body bg-white">
-                                <ul class="navbar-nav">
-                                    <li>
-                                        <div class="d-flex lift-no-shadow">
-                                            <img style="background-color: #f2f6fc;" class="ul-blog-img" height="60" width="60">
-                                            <a href="" style="padding-left: 0.5rem;" class="fw-bold nav-link text-black-50 text-decoration-none">
-                                                CAA Palaro 2022
-                                                <br><span class="text-muted">09/25/2022</span>
-                                            </a>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="./student-enrolled-subjects.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text feather-xl text-primary mb-3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                            <h5>Worksheets</h5>
+                                            <div class="text-muted small">View the list of your enrolled subjects.</div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="d-flex lift-no-shadow">
-                                            <img style="background-color: #f2f6fc;" class="ul-blog-img" height="60" width="60">
-                                            <a href="" style="padding-left: 0.5rem;" class="fw-bold nav-link text-black-50 text-decoration-none">
-                                                Sci-Math 2022
-                                                <br><span class="text-muted">09/16/2022</span>
-                                            </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="./student-enrolled-subjects.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive feather-xl text-primary mb-3"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                                            <h5>Classroom</h5>
+                                            <div class="text-muted small">View the list of your enrolled subjects.</div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="d-flex lift-no-shadow">
-                                            <img style="background-color: #f2f6fc;" class="ul-blog-img" height="60" width="60">
-                                            <a href="" style="padding-left: 0.5rem;" class="fw-bold nav-link text-black-50 text-decoration-none">
-                                                Buwan ng Wika 2022
-                                                <br><span class="text-muted">09/5/2022</span>
-                                            </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="./student-cashier-account.html">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign feather-xl text-primary mb-3"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                            <h5>School Balance</h5>
+                                            <div class="text-muted small">To keep track of your account and other necessary balance</div>
                                         </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-footer bg-white border-0"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="#">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users feather-xl text-primary mb-3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                            <h5>Clubs & Organizations</h5>
+                                            <div class="text-muted small">View informations about your clubs & organizations.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="#">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square feather-xl text-primary mb-3"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                            <h5>Tambayan Corner</h5>
+                                            <div class="text-muted small">Chat with your fellow students/schoolmates!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-xl-4 mb-4">
+                            <a class="card lift h-100" href="#">
+                                <div class="card-body d-flex justify-content-center flex-column">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2 feather-xl text-primary mb-3"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                            <h5>School Forum</h5>
+                                            <div class="text-muted small">CAA's very own school forum! What's on your mind?</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
