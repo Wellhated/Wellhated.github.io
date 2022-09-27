@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>New Faculty Member - Profile</title>
+        <title>Instructor Classes - CAA</title>
+        <link href="./css/simple-datatables-style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
         <script data-search-pseudo-elements defer src="./js/all.min.js"></script>
@@ -20,8 +21,8 @@
             <!-- * * Tip * * You can use text or an image for your navbar brand.-->
             <!-- * * * * * * When using an image, we recommend the SVG format.-->
             <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
-            <a href="index.html"><img style="margin-left: -40px;" height="40px" width="10px" class="navbar-brand" src="./caa-header-title.svg" alt=""></a>
-            
+            <a><img style="padding-right: 80px;" height="40px" width="10px" class="navbar-brand" src="./caa-1.svg" alt=""></a>
+
             <!-- Navbar Items-->
             <ul class="navbar-nav align-items-center ms-auto">
                 <li class="nav-item dropdown no-caret d-none d-md-block me-3">
@@ -115,19 +116,19 @@
                             <!-- Sidenav Heading (Addons)-->
                             <div class="sidenav-menu-heading">School Management</div>
                             <!-- Sidenav Link (Charts)-->
-                            <a class="nav-link" href="./admin-view-students.html">
+                            <a class="active nav-link" href="./admin-view-students.html">
                                 <div class="nav-link-icon"><i data-feather="users"></i></div>
                                 Students
                             </a>
     
-                            <a class="active nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="false" aria-controls="collapseFaculty">
+                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFaculty" aria-expanded="false" aria-controls="collapseFaculty">
                                 <div class="nav-link-icon"><i data-feather="monitor"></i></div>
                                 Faculty
                                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse show" id="collapseFaculty" data-bs-parent="#accordionSidenav">
+                            <div class="collapse" id="collapseFaculty" data-bs-parent="#accordionSidenav">
                                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavMenu">
-                                    <a class="active nav-link" href="./admin-faculty-members.html">
+                                    <a class="nav-link" href="./admin-faculty-members.html">
                                         <div class="nav-link-icon"><i data-feather="users"></i></div>
                                         Faculty Members
                                     </a>
@@ -181,113 +182,101 @@
                 <main>
                     <!-- Main page content-->
                     <div class="container-xl px-4 mt-4">
-                        <!-- Account page navigation-->
-                        <div class="col-12 col-xl-auto mb-3">
-                            <a class="btn btn-sm btn-light text-primary" href="./admin-faculty-members.html">
-                                <i data-feather="arrow-left"></i>
-                                Back to Users List
-                            </a>
-                        </div>
-                        <nav class="nav nav-borders">
-                            <a class="nav-link active ms-0" href="account-profile.html">New Faculty Member</a>
-                        </nav>
-                        <hr class="mt-0 mb-4" />
-                        <div class="row">
-
-                            <div class="col-xl-4">
-                                <!-- Profile picture card-->
-                                <div class="card mb-4 mb-xl-0 glass-thick">
-                                    <div class="card-header">Profile Picture</div>
-                                    <div class="card-body text-center">
-                                        <!-- Profile picture image-->
-                                        <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" />
-                                        <!-- Profile picture help block-->
-                                        <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
-                                        <!-- Profile picture upload button-->
-                                        <button class="btn btn-primary" type="button">Upload new image</button>
-                                    </div>
+                       <!-- Invoice-->
+                       <div class="card invoice">
+                        <div class="card-header p-4 p-md-5 border-bottom-0 header-wave-design text-white-50">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-12 col-lg-auto mb-5 mb-lg-0 text-center text-lg-start">
+                                    <!-- Invoice branding-->
+                                    <img class="invoice-brand-img mb-4" style="height: 10rem; width: 10rem" src="./caa-logo-outline.svg" alt="" />
                                 </div>
-                            </div>
-                            <div class="col-xl-8">
-                                <!-- Account details card-->
-                                <div class="card mb-4 glass-thick">
-                                    <div class="card-header">Account Details</div>
-                                    <div class="card-body">
-                                        <form>
-                                            <!-- Form Row-->
-                                            <div class="row gx-3 mb-3">
-                                                <!-- Form Group (first name)-->
-                                                <div class="col-md-4">
-                                                    <label class="small mb-1" for="inputFirstName">First name</label>
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="" value="" />
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label class="small mb-1" for="inputLastName">Middle name</label>
-                                                    <input class="form-control" id="inputLastName" type="text" placeholder="" value="" />
-                                                </div>
-                                                <!-- Form Group (last name)-->
-                                                <div class="col-md-4">
-                                                    <label class="small mb-1" for="inputLastName">Last name</label>
-                                                    <input class="form-control" id="inputLastName" type="text" placeholder="" value="" />
-                                                </div>
-                                            </div>
-                                            <!-- Form Group (email address)-->
-                                            <div class="row gx-3 mb-3">
-                                                <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                                    <input class="form-control" id="inputEmailAddress" type="email" placeholder="" value="" />
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputPhone">Phone number</label>
-                                                    <input class="form-control" id="inputPhone" type="tel" placeholder="+6391234568" value="" />
-                                                </div>
-                                            </div>
-                                            <div class="row gx-3 mb-3">
-                                                <!-- <div class="col-md-4">
-                                                    <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                                    <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988" />
-                                                </div> -->
-                                                <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputGender">Birthday</label>
-                                                    <div class="input-group input-group-joined" style="width: 20rem; height: 50px;">
-                                                        <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
-                                                        <input class="form-control ps-0 pointer" id="litepickerRangePlugin" placeholder="Select date range...">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 sbp-preview-content">
-                                                    <label class="small mb-1" for="inputGender">Birthday</label>
-
-                                                    <div class="form-check form-check-solid">
-                                                        <input class="form-check-input" id="flexRadioSolid1" type="radio" name="flexRadioSolid">
-                                                        <label class="form-check-label" for="flexRadioSolid1">Male</label>
-                                                    </div>
-                                                    <div class="form-check form-check-solid">
-                                                        <input class="form-check-input" id="flexRadioSolid2" type="radio" name="flexRadioSolid" checked="">
-                                                        <label class="form-check-label" for="flexRadioSolid2">Female</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Form Row-->
-                                            <div class="row gx-3 mb-3">
-                                                <div class="col-md-12">
-                                                    <label class="small mb-1" for="inputOrgName">Role ( Line by line )</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                </div>
-                                            </div>
-                                            <!-- Save changes button-->
-                                            <button class="btn btn-primary" type="button">Register</button>
-                                            <button class="btn btn-danger" type="button">Clear</button>
-                                        </form>
-                                    </div>
+                                <div class="col-12 col-lg-auto dark-media text-center text-lg-end">
+                                    <div class="h1 dark-media mb-4">Grading Record</div>
+                                    <!-- Invoice details-->
+                                    <div class="h5 dark-media">Landrei R. Zerna</div>
+                                    G12 - STEM
                                 </div>
                             </div>
                         </div>
-                    </div>
+                           <div class="card-body p-4 p-md-5">
+                               <nav class="nav nav-borders">
+                                   <a class="nav-link active ms-0" href="#">1st Qrtr</a>
+                                   <a class="nav-link" href="#">2nd Qrtr</a>
+                                   <a class="nav-link" href="#">3rd Qrtr</a>
+                                   <a class="nav-link" href="#">4th Qrtr</a>
+                               </nav>
+                               <hr class="nav-hr mt-0 mb-4" />
+                               <div class="table-responsive">
+                                   <table class="table table-borderless mb-0">
+                                       <thead class="border-bottom">
+                                           <tr class="small text-uppercase text-muted">
+                                               <th class="text-start" scope="col">Subject</th>
+                                               <th class="text-start" scope="col">1st</th>
+                                               <th class="text-start" scope="col">2nd</th>
+                                               <th class="text-start" scope="col">3rd</th>
+                                               <th class="text-start" scope="col">4th</th>
+                                               <th class="text-start" scope="col">Final</th>
+                                               <th class="text-start" scope="col">Remarks</th>
+                                           </tr>
+                                       </thead>
+                                       <tbody>
+                                           <tr class="border-bottom">
+                                               <td class="text-start fw-bold">Basic Calculus</td>
+                                               <td class="text-start fw-bold text-red">INC</td>
+                                               <td class="text-start fw-bold text-primary">88</td>
+                                               <td class="text-start fw-bold text-primary">89</td>
+                                               <td class="text-start fw-bold text-green">95</td>
+                                               <td class="text-start fw-bold text-yellow">75</td>
+                                               <td class="text-start fw-bold text-red">FAILED</td>
+                                           </tr>
+                                           <tr class="border-bottom">
+                                               <td class="text-start fw-bold">Practical Research</td>
+                                               <td class="text-start fw-bold text-red">INC</td>
+                                               <td class="text-start fw-bold text-yellow">75</td>
+                                               <td class="text-start fw-bold text-primary">88</td>
+                                               <td class="text-start fw-bold text-green">95</td>
+                                               <td class="text-start fw-bold text-primary">89</td>
+                                               <td class="text-start fw-bold text-green">PASSED</td>
+                                           </tr>
+                                           <tr class="border-bottom">
+                                               <td class="text-start fw-bold">Physical Education</td>
+                                               <td class="text-start fw-bold text-red">INC</td>
+                                               <td class="text-start fw-bold text-primary">88</td>
+                                               <td class="text-start fw-bold text-primary">89</td>
+                                               <td class="text-start fw-bold text-green">95</td>
+                                               <td class="text-start fw-bold text-yellow">75</td>
+                                               <td class="text-start fw-bold text-green">PASSED</td>
+                                           </tr>
+                                           <tr class="border-bottom">
+                                               <td class="text-start fw-bold">Filipino</td>
+                                               <td class="text-start fw-bold text-red">INC</td>
+                                               <td class="text-start fw-bold text-yellow">75</td>
+                                               <td class="text-start fw-bold text-primary">88</td>
+                                               <td class="text-start fw-bold text-green">95</td>
+                                               <td class="text-start fw-bold text-primary">89</td>
+                                               <td class="text-start fw-bold text-green">PASSED</td>
+                                           </tr>
+                                           <tr class="border-bottom">
+                                               <td class="text-start fw-bold">TLE</td>
+                                               <td class="text-start fw-bold text-red">INC</td>
+                                               <td class="text-start fw-bold text-yellow">75</td>
+                                               <td class="text-start fw-bold text-primary">88</td>
+                                               <td class="text-start fw-bold text-green">95</td>
+                                               <td class="text-start fw-bold text-primary">89</td>
+                                               <td class="text-start fw-bold text-green">PASSED</td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                               </div>
+                           </div>
+   
+                       </div>
+                   </div>
                 </main>
                 <footer class="footer-admin mt-auto footer-light">
                     <div class="container-xl px-4">
                         <div class="row">
-                            <div class="col-md-6 small">Copyright &copy; Your Website 2021</div>
+                            <div class="col-md-6 small">Copyright &copy; Caldwell Adventist Academy 2022</div>
                             <div class="col-md-6 text-md-end small">
                                 <a href="#!">Privacy Policy</a>
                                 &middot;
@@ -301,5 +290,12 @@
 
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="./js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="./assets/demo/chart-area-demo.js"></script>
+        <script src="./assets/demo/chart-bar-demo.js"></script>
+        <script src="./assets/demo/chart-pie-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
+        <script src="./js/litepicker.js"></script>
+
     </body>
 </html>
